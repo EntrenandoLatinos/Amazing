@@ -131,7 +131,16 @@ AUTHENTICATION_BACKENDS = [
 ]
 
 SITE_ID = 1
+ACCOUNT_EMAIL_SUBJECT_PREFIX = '¡Amazing Roofing Team! - '
 LOGIN_URL = 'account_login'
 LOGIN_REDIRECT_URL = 'app_user:login-redirect'
-
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
+# ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_RATE_LIMITS = {
+    'login_failed': {'limit': 6, 'timeout': 300},  # 6 intentos de inicio de sesión fallidos en 5 minutos
+}
+ACCOUNT_USERNAME_MIN_LENGTH = 4
+# ACCOUNT_USERNAME_REQUIRED = False
+ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = True
+
+FILE_UPLOAD_PERMISSIONS = 0o644
