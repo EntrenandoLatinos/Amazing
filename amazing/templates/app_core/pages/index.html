@@ -1,0 +1,49 @@
+{% extends "app_core/base.html" %}
+
+{% load static %}
+
+{% block head_title %}{{ block.super }} Home{% endblock head_title %}
+
+{% block extra_styles %}{% endblock extra_styles %}
+
+{% block content %}
+
+<!-- start Banner -->
+{% include 'app_core/snippets/banner.html' %}
+<!-- end Banner -->
+
+<!-- start Feature -->
+{% include 'app_core/snippets/feature2.html' %}
+<!-- end Feature -->
+
+<!-- start About -->
+{% include 'app_core/snippets/about3.html' %}
+<!-- end About -->
+
+<!-- start Insurance -->
+{% include 'app_core/snippets/insurance.html' %}
+<!-- end Insurance -->
+
+<!-- start Services -->
+{% include 'app_core/snippets/services.html' %}
+<!-- end Services -->
+
+<!-- start Social Media -->
+{% include 'app_core/snippets/social_media.html' %}
+<!-- end Social Media -->
+
+<!-- start Portafolio -->
+{% include 'app_core/snippets/portafolio.html' %}
+<!-- end Portafolio -->
+
+<!-- start Testimonials -->
+{% include 'app_core/snippets/testimonials.html' %}
+<!-- end Testimonials -->
+
+<!-- start Partners -->
+{% include 'app_core/snippets/partners.html' %}
+<!-- end Partners -->
+
+{% endblock content %}
+
+{% block extra_javascript %}{% endblock extra_javascript %}

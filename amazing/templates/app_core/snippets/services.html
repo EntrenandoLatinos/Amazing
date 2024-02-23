@@ -1,0 +1,101 @@
+{% load static %}
+
+<!-- Portfolio Section -->
+<section id="portfolio-section" class="portfolio-section pad-bottom-30 pad-bottom-md-none">
+    <div class="row">
+        <!-- Col -->
+        <div class="offset-md-2 col-md-8">
+            <div class="title-wrap text-center">
+                <div class="section-title">
+                    <h2 class="title mb-0">Featured <span class="theme-color">Works</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Col -->
+        <div class="col-md-12">
+            <div class="row portfolio-wrap portfolio-classic px-4">
+                <div class="filter-style-2" align="center">
+                    <div class="filter-wrap">
+                        <button class="btn btn-default filter-button active" data-filter="all">All</button>
+                        <button class="btn btn-default filter-button" data-filter="roofing">Roofing</button>
+                        <button class="btn btn-default filter-button" data-filter="siding">Siding</button>
+                        <button class="btn btn-default filter-button" data-filter="gutter">Gutter</button>
+                    </div>
+                </div>
+                <br>
+
+                <!-- .portfolio-item -->
+                <div class="portfolio-item portfolio-overlay-wrap col-lg-4 col-md-6 col-sm-12 col-xs-12 filter roofing">
+                    <!-- .portfolio-thumb -->
+                    <div class="portfolio-thumb relative">
+                        <img src="{% static 'app_core/images/portfolio/portfolio-grid/grid2/service1.webp' %}" class="img-fluid" alt=""
+                            title="Invest Advices" />
+                        <!-- .portfolio-wrap -->
+                        <div class="portfolio-wrap">
+                            <div class="portfolio-details-overlay">
+                                <h3 class="mb-3"><a href="single-project.html" target="_blank">Kitchen and living</a>
+                                </h3>
+                                <div class="portfolio-icons">
+                                    <a href="single-project.html" class="link-icon" target="_blank">
+                                        <i class="icon-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .portfolio-wrap -->
+                    </div>
+                </div>
+                <!-- .portfolio-item end-->
+                <!-- .portfolio-item -->
+                <div class="portfolio-item portfolio-overlay-wrap col-lg-4 col-md-6 col-sm-12 col-xs-12 filter siding">
+                    <!-- .portfolio-thumb -->
+                    <div class="portfolio-thumb relative">
+                        <img src="{% static 'app_core/images/portfolio/portfolio-grid/grid2/2.jpg' %}" class="img-fluid" alt=""
+                            title="Simple Solutions" />
+                        <!-- .portfolio-wrap -->
+                        <div class="portfolio-wrap">
+                            <div class="portfolio-details-overlay">
+                                <h3 class="mb-3"><a href="single-project.html" target="_blank">Modern Materials</a></h3>
+                                <div class="portfolio-icons">
+                                    <a href="single-project.html" class="link-icon" target="_blank">
+                                        <i class="icon-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .portfolio-wrap -->
+                    </div>
+                </div>
+                <!-- .portfolio-item end-->
+                <!-- .portfolio-item -->
+                <div class="portfolio-item portfolio-overlay-wrap col-lg-4 col-md-6 col-sm-12 col-xs-12 filter gutter">
+                    <!-- .portfolio-thumb -->
+                    <div class="portfolio-thumb relative">
+                        <img src="{% static 'app_core/images/portfolio/portfolio-grid/grid2/3.jpg' %}" class="img-fluid" alt=""
+                            title="Finance Consulting" />
+                        <!-- .portfolio-wrap -->
+                        <div class="portfolio-wrap">
+                            <div class="portfolio-details-overlay">
+                                <h3 class="mb-3"><a href="single-project.html" target="_blank">House of Cards</a></h3>
+                                <div class="portfolio-icons">
+                                    <a href="single-project.html" class="link-icon" target="_blank">
+                                        <i class="icon-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .portfolio-wrap -->
+                    </div>
+                </div>
+                <!-- .portfolio-item end-->
+
+                <!-- .portfolio-item -->
+                <div class="portfolio-item portfolio-overlay-wrap col-lg-4 col-md-6 col-sm-12 col-xs-12 filter gutter"></div>
+                <!-- .portfolio-item end-->
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio Section End -->

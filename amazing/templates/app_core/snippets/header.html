@@ -1,0 +1,186 @@
+{% load static %}
+
+<header>
+    <!--Mobile Header-->
+    <div class="mobile-header bg-white typo-dark">
+        <div class="mobile-header-inner">
+            <div class="sticky-outer">
+                <div class="sticky-head">
+                    <div class="basic-container clearfix">
+                        <ul class="nav mobile-header-items pull-left">
+                            <li class="nav-item"><a href="#" class="zmm-toggle img-before"><i class="ti-menu"></i></a></li>
+                        </ul>
+                        <ul class="nav mobile-header-items pull-center">
+                            <li>
+                                <a href="index.html" class="img-before"><img src="{% static 'app_core/images/logo2.png' %}" class="img-fluid" width="103" height="45" alt="Logo"></a>
+                            </li>
+                        </ul>
+                        <ul class="nav mobile-header-items pull-right">
+                            <li class="nav-item"><a href="#" class="img-before overlay-search-switch"><i class="icon-magnifier icons"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- .basic-container -->
+                </div>
+                <!-- .sticky-head -->
+            </div>
+            <!-- .sticky-outer -->
+        </div>
+        <!-- .mobile-header-inner -->
+    </div>
+    <!-- .mobile-header -->
+    <!--Header-->
+    <div class="header-inner header-4">                    
+        <!--Logobar-->
+        <div class="topbar">
+            <div class="basic-container clearfix">
+                <div class="logobar-inner">
+                    <!--Logobar Left Item-->
+                    <ul class="nav logobar-items pull-left">
+                        <li>
+                            <a href="index.html" class="logo-general"><img src="{% static 'app_core/images/logo7.png' %}" class="img-fluid" width="103" height="45" alt="Logo" /></a>
+                        </li>
+                    </ul>
+                    <!--Logobar Right Item-->
+                    <ul class="nav logobar-items pull-right">
+                        <!--Nav Item-->
+                        <li class="nav-item me-4">
+                            <!--Media-->
+                            <div class="media header-info d-inline-block lh-1 align-middle">
+                                <span class="header-icon colorWhite">
+                                    <i class="ti-map-alt align-middle me-2"></i>
+                                </span>
+                                <div class="media-body d-inline-block align-middle">
+                                    <h6 class="mb-0 colorWhite">No. 12, Ribon Building,</h6> 
+                                    <p class="mb-0 mt-1 colorGray">Walse street, Australia.</p>
+                                </div>
+                            </div>
+                            <!-- Media End -->
+                        </li>
+                        <!--Nav Item-->
+                        <!--Nav Item-->
+                        <li class="nav-item me-4">
+                            <!--Media-->
+                            <div class="media header-info d-inline-block lh-1 align-middle">
+                                <span class="header-icon colorWhite">
+                                    <i class="ti-time align-middle me-2"></i>
+                                </span>
+                                <div class="media-body d-inline-block align-middle">
+                                    <h6 class="mb-0 colorWhite">Monday-Friday: 9am to 5pm</h6> 
+                                    <p class="mb-0 mt-1 colorGray">Saturday / Sunday: Closed</p>
+                                </div>
+                            </div>
+                            <!-- Media End -->
+                        </li>
+                        <!--Nav Item-->
+                        <!--Nav Item-->
+                        <li class="nav-item">
+                            <!--Media-->
+                            <div class="media header-info d-inline-block lh-1 align-middle">
+                                <span class="header-icon colorWhite">
+                                    <i class="ti-headphone-alt align-middle me-2"></i>
+                                </span>
+                                <div class="media-body d-inline-block align-middle">
+                                    <h6 class="mb-0"><a href="tel:+(528)456-7592" class="mb-0 mt-1" style="color: white;">+(528) 456-7592</a></h6> 
+                                    <a href="mailto:info@example.com" class="mb-0 mt-1" style="color: #ebebeb;">info@example.com</a>
+                                </div>
+                            </div>
+                            <!-- Media End -->
+                        </li>
+                        <!--Nav Item-->									
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Sticky part-->
+        <div class="sticky-outer">
+            <div class="sticky-head">
+                <!--Navbar-->
+                <nav class="navbar nav-shadow">
+                    <div class="basic-container clearfix">
+                        <div class="navbar-inner">                                        
+                            <!-- Menu -->
+                            <ul class="nav navbar-items pull-center">
+                                <!--List Item-->
+                                <li class="list-item">
+                                    <ul class="nav navbar-main theme-main-menu">
+                                        <li class="menu-item"><a href="javascript:;">Home</a></li>
+                                        <li class="menu-item"><a href="javascript:;">About Us</a></li>
+                                        <li class="dropdown cus-img-menu dropdown-sub"><a href="index.html">Services</a>
+                                            <ul class="dropdown-menu mega-dropdown-menu basic-container dropdown-col-3 clearfix">
+                                                
+                                                <li class="mega-dropdown-col">                                                                
+                                                    <div class="img-menu">
+                                                        <!--News Post-->
+                                                        <div class="img-block">
+                                                            <a href="index.html">
+                                                                <img src="{% static 'app_core/images/screenshot/gutter.webp' %}" width='400' height='500' alt="screenshot-img">
+                                                            </a>
+                                                        </div>
+                                                        <div class="title-wrap">
+                                                            <p><a href="index.html" class="mega-menu-title">Gutter</a></p>
+                                                        </div>                                                                       
+                                                    </div>
+                                                </li>
+                                                <li class="mega-dropdown-col">
+                                                    <div class="img-menu">
+                                                        <!--News Post-->
+                                                        <div class="img-block">
+                                                            <a href="index-2.html">
+                                                                <img src="{% static 'app_core/images/screenshot/roofing.webp' %}" width='400' height='500' alt="screenshot-img">
+                                                            </a>
+                                                        </div>
+                                                        <div class="title-wrap">
+                                                            <p><a href="index-2.html" class="mega-menu-title">Roofing</a></p>
+                                                        </div>                                                                       
+                                                    </div>
+                                                </li>
+                                                <li class="mega-dropdown-col">
+                                                    <div class="img-menu">
+                                                        <!--News Post-->
+                                                        <div class="img-block">
+                                                            <a href="index-3.html">
+                                                                <img src="{% static 'app_core/images/screenshot/siding.webp' %}" width='400' height='500' alt="screenshot-img">
+                                                            </a>
+                                                        </div>
+                                                        <div class="title-wrap">
+                                                            <p><a href="index-3.html" class="mega-menu-title">Siding</a></p>
+                                                        </div>                                                                       
+                                                    </div>
+                                                </li>
+                                                
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown relative menu-item-logo d-none d-lg-block">
+                                            <div class="main-logo">
+                                            <a href="index.html" class="logo-general"><img src="{% static 'app_core/images/logo2.png' %}" class="img-fluid" width="115" height="50" alt="Logo" /></a>
+                                            <a href="index.html" class="logo-sticky"><img src="{% static 'app_core/images/logo2.png' %}" class="img-fluid changeable-dark" width="103" height="45" alt="Logo" /></a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-item"><a href="javascript:;">Works</a></li>
+                                        <li class="menu-item"><a href="javascript:;">FAQ's</a></li>
+                                        <li class="menu-item"><a href="javascript:;">Contact</a></li>
+                                        <li class="menu-item"><a href="javascript:;">Privacy</a></li>							
+                                    </ul>
+                                </li>
+                                <!--List Item End-->
+                            </ul>
+                            <!-- Menu -->                                                                                
+                        </div>
+                    </div>
+                    <!--Search-->
+                    <div class="full-view-wrapper hide">
+                        <a href="#" class="close full-view-close"></a>
+                        <form class="navbar-form search-form" role="search">
+                            <div class="input-group">
+                                <input class="form-control" placeholder="Search hit enter.." name="srch-term" type="text">
+                            </div>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+            <!--sticky-head-->
+        </div>
+        <!--sticky-outer-->
+    </div>
+</header>
+<!-- header -->		
