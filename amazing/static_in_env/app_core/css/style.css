@@ -1164,7 +1164,7 @@ header.header-absolute {
 .header-4 .topbar {
     /* background: rgba(0,22,47,1); */
     /* background: rgba(27,90,203,1); */
-    background: linear-gradient(to left, #a82c2e 50%, rgb(247, 84, 35));
+    background: linear-gradient(to left, #ae2c2e 50%, #e62d32);
 }
 .header-4 .menu-item-logo {
     padding: 0 30px;
