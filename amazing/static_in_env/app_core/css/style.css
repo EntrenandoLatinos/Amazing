@@ -1164,7 +1164,7 @@ header.header-absolute {
 .header-4 .topbar {
     /* background: rgba(0,22,47,1); */
     /* background: rgba(27,90,203,1); */
-    background: linear-gradient(to left, #ae2c2e 50%, #e62d32);
+    background: linear-gradient(to left, #2c92d0 50%, #6ac6ff);
 }
 .header-4 .menu-item-logo {
     padding: 0 30px;
@@ -10648,7 +10648,8 @@ body.dark-type, .dark-type .semi-dark h1, .dark-type .full-dark h1, .dark-type s
 .filter-button.active,
 .filter-button.btn-default:hover,
 .filter-button.btn-default:focus {
-	color: #000;
+	/* color: #000; */
+    color: #fff;
 }
 .filter-button::before {
     position: absolute;

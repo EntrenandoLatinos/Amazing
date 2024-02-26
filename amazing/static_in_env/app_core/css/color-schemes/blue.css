@@ -4,36 +4,36 @@
 
 /* Zmm Wrapper */
 .close:before, .close:after {
-	background-color: #1395E1;
+	background-color: #2c92d0;
 }
 .form-control:focus,
 .search-form-wrapper .form-control:focus,
 .overlay-search .search-form-wrapper .form-control:focus {
-    border-color: #1395E1 !important;
+    border-color: #2c92d0 !important;
 }
 /* Page Title */
 .page-title-wrap:before {
-    background: #1395E1;
+    background: #2c92d0;
 }
 /*Link Colors*/
 a:hover, a:active, a:focus, .post-meta li a:hover,
 .nav.author-social>li>a:hover {
-	color: #1395E1;
+	color: #2c92d0;
 }
 .post-comments span.author:before, 
 .post-comments span.date:before, 
 a.comment-reply-link i, .blog-link .link:hover,
 .zig-zag-col .entry-meta i {
-    color: #1395E1;
+    color: #2c92d0;
 }
 /*Bg Dark Colors*/
 .bg-theme {
-    background: #1395E1;
+    background: #2c92d0;
 }
 .bg-semi-transparent-dark ul.nav.navbar-main > li > a:hover, 
 .bg-semi-transparent-dark .mega-dropdown .dropdown-menu > li > ul > li > a:hover,
 .bg-transparent.typo-white ul.nav.navbar-main > li > a:hover {
-	color: #1395E1;
+	color: #2c92d0;
 }
 .bg-1 {
     background-color: #00162FEB;
@@ -56,14 +56,14 @@ a.comment-reply-link i, .blog-link .link:hover,
 /* Topbar Colors */
 .topbar a:hover, .topbar a:hover i, .header-1 .topbar.typo-white a:hover,
 .error-page > h1 {
-    color: #1395E1;
+    color: #2c92d0;
 }
 .topbar.top-bar-bg-color {
-    background: #1395E1;
+    background: #2c92d0;
 }
 /* Logobar Colors */
 .logobar .header-info a:hover {
-    color: #1395E1;
+    color: #2c92d0;
 }
 /*Main Menu Colors*/
 .navbar ul.nav.navbar-main > li > a:hover, .navbar ul.nav.navbar-main > li.active > a,
@@ -73,54 +73,63 @@ ul.nav.navbar-main.theme-main-menu > li > a.active, .navbar ul.nav.navbar-main.m
 .header-sticky .navbar ul.nav.navbar-main.menu-white > li > a.active i,
 .header-1 .header-sticky a i,
 .navbar .contact-icon i {
-	color: #1395E1;
+	color: #2c92d0;
 }
 .mega-dropdown .dropdown-menu > li > ul > li > a:hover,
 .bg-dark .mega-dropdown .dropdown-menu > li > ul > li > a:hover,
 .sticky-main-wrapper ul.nav.navbar-nav > li > a:hover,
 .sticky-main-wrapper ul.nav.navbar-nav > li.active > a,
 .bg-dark .dropdown-menu > li > a:hover, .zmm-wrapper .zmm-dropdown-toggle {
-	color: #1395E1;
+	color: #2c92d0;
 }
 .bg-dark .search-form .search-btn,
 .search-form .search-btn,
 .sidebar-menu-wrap ul li a.active,
 .sidebar-menu-wrap ul li a:hover,
 .sidebar-menu-wrap ul li a:focus {
-	background: #1395E1;
+	background: #2c92d0;
 }
 footer.bg-light a:hover, footer.bg-dark a:hover,
 footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 .sidebar .recent-posts .list-post a:hover,
 .sidebar .popular-posts .list-post a:hover {
-	color: #1395E1;
+	color: #2c92d0;
 }
 /*Theme Colors*/
+.bgColorWhite{
+    background: white;
+}
+.colorWhite{
+    color: white;
+}
+.colorGray{
+    color: #ebebeb;
+}
 .theme-color, 
 .typo-white .theme-color,
 .typo-dark .theme-color,
 .rotate.spin {
-	color: #1395E1;
+	color: #2c92d0;
 }
 .themeh-color, 
 .typo-white .themeh-color,
 .typo-dark .themeh-color {
-	color: #1395E1;
+	color: #2c92d0;
 }
 /*Gradient Colors*/
 .gradient-bg {
-    background: -webkit-linear-gradient(56deg, #3380de 35%, #1395E1 65%);
-    background: linear-gradient(56deg, #3380de 35%, #1395E1 65%);
+    background: -webkit-linear-gradient(56deg, #3380de 35%, #2c92d0 65%);
+    background: linear-gradient(56deg, #3380de 35%, #2c92d0 65%);
 }
 .pricing-table-wrapper.pricing-style-1:hover .pricing-table-head, 
 .pricing-table-active.pricing-table-wrapper.pricing-style-1 .pricing-table-head {
-    background: -webkit-linear-gradient(-172deg, #3380de 35%, #1395E1 65%);
-    background: linear-gradient(-172deg, #3380de 35%, #1395E1 65%);
+    background: -webkit-linear-gradient(-172deg, #3380de 35%, #2c92d0 65%);
+    background: linear-gradient(-172deg, #3380de 35%, #2c92d0 65%);
 }
 .pricing-style-1:hover .pricing-inner-wrapper > *:nth-child(2), .pricing-table-active.pricing-style-1 .pricing-inner-wrapper > *:nth-child(2),
 .pricing-style-1 .btn-default:hover {
-    background: -webkit-linear-gradient(-180deg, #3380de 40%, #1395E1 90%) !important;
-    background: linear-gradient(-180deg, #3380de 40%, #1395E1 90%) !important;
+    background: -webkit-linear-gradient(-180deg, #3380de 40%, #2c92d0 90%) !important;
+    background: linear-gradient(-180deg, #3380de 40%, #2c92d0 90%) !important;
 }
 .blog-list-style-1 .blog-thumb:before,
 .blog-list-style-2 .blog-thumb:before {
@@ -129,12 +138,12 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
     background: -moz-linear-gradient(to bottom, rgba(51,128,222,0.8) 0%, rgba(0,96,214,0.8) 75%);
 }
 .cobbles-overlay-wrap:before {
-    background: -webkit-linear-gradient(-150deg, #3380de 35%, #1395E1 65%);
-    background: linear-gradient(-150deg, #3380de 35%, #1395E1 65%);
+    background: -webkit-linear-gradient(-150deg, #3380de 35%, #2c92d0 65%);
+    background: linear-gradient(-150deg, #3380de 35%, #2c92d0 65%);
 }
 .ministries-box-style-1 .ministries-icon {
-    background: -webkit-linear-gradient(-150deg, #3380de 35%, #1395E1 65%);
-    background: linear-gradient(-150deg, #3380de 35%, #1395E1 65%);
+    background: -webkit-linear-gradient(-150deg, #3380de 35%, #2c92d0 65%);
+    background: linear-gradient(-150deg, #3380de 35%, #2c92d0 65%);
 }
 .team-style-2 .team-overlay .team-thumb:before {
 	background: linear-gradient(to bottom, rgba(51,128,222,0.8) 0%, rgba(0,96,214,0.8) 75%);
@@ -143,14 +152,14 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 }
 /*Hover Colors*/
 .bg-dark a:hover, .typo-dark a:hover {
-	color: #1395E1;
+	color: #2c92d0;
 }
 .typo-dark .btn:hover, .bg-dark .btn:hover {
 	color: #fff;
 }
 /* Hover Bg Colors*/
 .hvr-theme:hover {
-	background-color: #1395E1;
+	background-color: #2c92d0;
 }
 /*Background Overlay Colors*/
 .theme-overlay {
@@ -162,7 +171,7 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 /*Icon Colors*/
 .icon-theme, .day-count-icon > span,
 .slider-block1 .special-feature .mask-top:after {
-	color: #1395E1;
+	color: #2c92d0;
 }
 .full-view-wrapper .close:before, .full-view-wrapper .close:after,
 .overlay-search .close:before, .overlay-search .close:after,
@@ -172,102 +181,102 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 .filter-style-3 .filter-button::before,
 .special-feature .mask-top h4:before,
 .special-feature .s-feature-box:hover .mask-bottom {
-    background: #1395E1;	
+    background: #2c92d0;	
 }
 /*Slider Colors*/
 .bg-style.bg-normal {
-    background-color: #1395E1!important;
-    fill: #1395E1;
+    background-color: #2c92d0!important;
+    fill: #2c92d0;
 }
 /*Woo Commerce Colors*/
 .onsale, .cart-count {
-    background: #1395E1;	
+    background: #2c92d0;	
 }
 .product-details a:hover {
-	color: #1395E1;
+	color: #2c92d0;
 }
 /*Social Icon Colors*/
 .social-icons.icons-circle a > span,
 .post-meta .social-icons.small.icons-circle a > span:hover,
 .social-icons.icons-squared a > span {
-    background: #1395E1;
+    background: #2c92d0;
 }
 .header-inner .bg-dark .social-icons span:hover {
-	color: #1395E1;
+	color: #2c92d0;
 }
 /*Button Colors*/
 .btn, button, .btn-default, .h-btn > .btn:hover,
 .header-1 .h-btn.btn-2 > .btn,
 .header-3 .sticky-head.header-sticky {
-    background: #1395E1;
+    background: #2c92d0;
 }
 .btn-outline,
 .btn, .btn-default {
-    border-color: #1395E1 !important;
+    border-color: #2c92d0 !important;
 }
 .header-1 .navbar .navbar-main.menu-white > li > a:hover,
 .header-1 .header-sticky .navbar .navbar-main.menu-white > li > a:hover {
-	color: #1395E1 !important;
+	color: #2c92d0 !important;
 }
 .h-btn > .btn, .has-feedback.has-success .form-control-feedback {
-	color: #1395E1 !important;
+	color: #2c92d0 !important;
 }
 .header-navbar-text-1 .h-donate-btn,
 .navbar .header-phone {
-    background: #1395E1;
+    background: #2c92d0;
 }
 /*Border Colors*/
 .feature-box-wrap.f-box-style-3, .contact-form-3 .form-control:focus,
-.contact-form-3 .btn, . team-style-1 .form-control:focus,
+.contact-form-3 .btn, .team-style-1 .form-control:focus,
 .contact-form-1 .btn, .contact-form-5 .form-control:focus,
 .contact-form-5 .btn, .h-btn > .btn:hover, 
 .team-style-3 .team-details {
-    border-color: #1395E1;
+    border-color: #2c92d0;
 }
 .pricing-table-wrapper .btn:hover {
-	border: 2px solid #1395E1;	
+	border: 2px solid #2c92d0;	
  }
 .pricing-table-wrapper .btn:hover {
-	border: 1px solid #1395E1;	
+	border: 1px solid #2c92d0;	
  }
 .blog-single .blog-info-wrap blockquote.blockquote-2 {
-     border: 5px solid #1395E1;
+     border: 5px solid #2c92d0;
 }
 .dropdown:hover > .dropdown-menu {
-    border-top-color: #1395E1;
+    border-top-color: #2c92d0;
 }
 .single-portfolio .portfolio-meta {
-    background: #1395E1;
+    background: #2c92d0;
 }
 .form-control:focus, .form-control:active {
-    border-bottom: solid 1px #1395E1;
+    border-bottom: solid 1px #2c92d0;
 }
 .blog-classic .blog-inner>.blog-thumb:before {
-    border-top-color: #1395E1;
-    border-bottom-color: #1395E1;
+    border-top-color: #2c92d0;
+    border-bottom-color: #2c92d0;
 }
 .blog-classic .blog-inner>.blog-thumb:after {
     border-left-width: 2px;
     border-left-style: solid;
     border-right-width: 2px;
     border-right-style: solid;
-    border-right-color: #1395E1;
-    border-left-color: #1395E1;
+    border-right-color: #2c92d0;
+    border-left-color: #2c92d0;
 }
 .b-dot {
-    border: dotted #1395E1;
+    border: dotted #2c92d0;
 }
 .feature-box-wrap.f-box-style-2:after {
-    border-bottom-color: #1395E1;
+    border-bottom-color: #2c92d0;
 }
 .border-bottom::before, .border-top1, .border-bottom::after {
-    background: #1395E1;
+    background: #2c92d0;
 }
 .br-dotted {
-	border: 10px dotted #1395E1;
+	border: 10px dotted #2c92d0;
 }
 .br-solid {
-	border: 8px solid #1395E1;
+	border: 8px solid #2c92d0;
 }
 /*Owl Slider Colors*/
 .typo-dark .owl-dot.active span,
@@ -277,7 +286,7 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 .owl-carousel .owl-nav button.owl-prev:hover,
 .tweets_feed .owl-nav button.owl-next:hover, 
 .tweets_feed .owl-nav button.owl-prev:hover {
-    color: #1395E1;
+    color: #2c92d0;
 }
 .typo-dark .owl-dot.active span,
 .typo-white .owl-dot.active span,
@@ -286,42 +295,42 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 .owl-carousel .owl-nav button.owl-prev,
 .tweets_feed .owl-nav button.owl-next, 
 .tweets_feed .owl-nav button.owl-prev {
-    color: #1395E1;
+    color: #2c92d0;
 }
 .typo-white .owl-carousel .owl-nav button.owl-next span, 
 .typo-white .owl-carousel .owl-nav button.owl-prev span,
 .typo-white .tweets_feed .owl-nav button.owl-next span, 
 .typo-white .tweets_feed .owl-nav button.owl-prev span {
-    color: #1395E1;
+    color: #2c92d0;
 }
 .owl-dot.active span,
 .owl-prev span:after,
 .owl-next span:after,
 .twitter-feed.typo-white .owl-dot.active span {
-    background: #1395E1;
+    background: #2c92d0;
 }
 /* Portfolio Colors*/
 .portfolio-icons a {
-    background: #1395E1;
+    background: #2c92d0;
 }
 .portfolio-filter > ul > li.active > a, span.portfolio-meta-icon,
 .custom-post-nav a:hover i {
-    color: #1395E1;
+    color: #2c92d0;
 }
 .portfolio-filter.portfolio-filter-2 > ul > li > a:before,
 .portfolio-default .portfolio-item .portfolio-icons a:hover,
 .portfolio-classic .portfolio-overlay-wrap .portfolio-icons a {
-    background: #1395E1;
+    background: #2c92d0;
 }
 .portfolio-default .portfolio-item .portfolio-icons a:hover {
-    border-color: #1395E1 !important;
+    border-color: #2c92d0 !important;
 }
 .filter-style-2 .filter-wrap {
 	background: rgba(254,182,0,0.2);
 }
 .filter-style-3 .filter-button.btn-default:hover, 
 .filter-style-3 .filter-button.btn-default:focus {
-	color: #1395E1;
+	color: #2c92d0;
 }
 /* Pricing Colors*/
 .pricing-style-1 .price h6 .prefix,
@@ -331,13 +340,13 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 .pricing-style-1 .pricing-more a:hover,
 .pricing-style-2 .pricing-more a:hover,
 .pricing-style-1 ul.pricing-features li::before {
-    color: #1395E1;
+    color: #2c92d0;
 }
 .pricing-style-1.active .pricing-more a,
 .pricing-style-2.active .pricing-more a,
 .pricing-style-1 .pricing-more a:hover,
 .pricing-style-2 .pricing-more a:hover {
-	background: #1395E1;
+	background: #2c92d0;
 }
 .pricing-title h3.bg-ct-1 {
     background-image: linear-gradient(90deg, #FF4E00 0%, #FE9500 100%);
@@ -359,32 +368,32 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 .team-style-7 .team-details > .bottom-dot,
 .team-style-1 .team-thumb:after,
 .team-style-3 .team-inner:hover .team-overlay .team-social a {
-    background: #1395E1;
+    background: #2c92d0;
 }
 .team-style-1 .team-details::before {
-    border-bottom-color: #1395E1 !important;
+    border-bottom-color: #2c92d0 !important;
 }
 .team-inner .team-overlay {
 	background: rgba(0,21,47,0.8);
 }
 .team-style-1 .team-inner .team-overlay-details .social-icons a:hover span,
 .team-style-3 .team-inner .team-name a:hover {
-    color: #1395E1;
+    color: #2c92d0;
 }
 /*Testimonials Colors*/
 .quote:before, .testimonials-style-1 .testimonials-thumb:before {
-    background: #1395E1;
+    background: #2c92d0;
 }
 .testimonials-style-1 .testimonials-desc .blockquote-1:before,
 .testimonial-style-1 .testimonial-details .testimonial-title > * a {
-    color: #1395E1;
+    color: #2c92d0;
 }
 .testimonials-style-1 .testimonials-desc::before {
-    color: #1395E1;
+    color: #2c92d0;
 }
 /*Twitter Colors*/
 .tweet_time a::before {
-	color: #1395E1;
+	color: #2c92d0;
 }
 /*Blog Colors*/
 .blog-style-1 .blog-inner .blog-link a.link, 
@@ -395,16 +404,16 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 .blog-single .post-meta .social-icons a > span::before,
 .post-navigation-wrapper a.prev h4:hover, .post-navigation-wrapper a.next h4:hover,
 .blog-list-style-1 a.read-more {
-	color: #1395E1;
+	color: #2c92d0;
 }
 .blog-style-1 .blog-inner .top-meta .post-date a,
 .blog-style-2 .blog-details .post-date a,
 .post-navigation-wrapper .prev-nav-link .post-nav-text, 
 .post-navigation-wrapper .next-nav-link .post-nav-text {
-	background: #1395E1;
+	background: #2c92d0;
 }
 .post-navigation-wrapper {
-	border: solid 2px #1395E1;
+	border: solid 2px #2c92d0;
 }
 /*Featurebox Colors*/
 .feature-title-4 a, span.feature-count,
@@ -412,7 +421,7 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 .f-box-style-2:hover .f-box-inner .btn-link:hover, .f-list-4 a:hover,
 .feature-box-wrap.f-list-2:hover .feature-title > *,
 .contact-info.info-2 .f-list-4 .feature-list-icon span {
-	color: #1395E1;
+	color: #2c92d0;
 }
 .feature-box-wrap.f-list-1 .feature-list-icon,
 .f-box-style-1 .feature-box-details .feature-icon::before,
@@ -421,36 +430,36 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 .contact-info.info-2 .f-list-4:hover .feature-list-icon span,
 .features-border .col-lg-3::after,
 .features-border:last-child .col-lg-3::before {
-	background: #1395E1;
+	background: #2c92d0;
 }
 .f-box-style-3::after {
-    background-color: #1395E1;
+    background-color: #2c92d0;
 }
 .f-box-style-3 .feature-icon span,
 .feature-box-wrap.f-box-style-3:hover,
 .feature-box-wrap.f-box-style-4:hover,
 .feature-box-wrap.f-box-style-4:hover .feature-icon::before {
-    background-color: #1395E1;
+    background-color: #2c92d0;
 }
 .features-border {
-	border-color: #1395E1 !important;
+	border-color: #2c92d0 !important;
 }
 .feature-box-wrap.f-box-style-4:hover .feature-icon::before {
-    border: solid 6px #1395E1;
+    border: solid 6px #2c92d0;
 }
 .flip-box-inner.imghvr-flip-3d-horz .flip-box-front,
 .flip-box-inner.imghvr-flip-3d-horz .flip-box-back .flip-box-title:after,
 .feature-box-wrap.f-box-style-2:hover .feature-icon span {
-	background-color: #1395E1;
+	background-color: #2c92d0;
 }
 .flip-box-inner.imghvr-flip-3d-horz .flip-box-back .flip-box-title,
 .f-box-style-1 .feature-box-details .feature-icon span,
 .feature-box-wrap.f-box-style-2 .feature-icon span,
 .feature-box-wrap.f-box-style-2 .feature-btn a {
-	color: #1395E1;
+	color: #2c92d0;
 }
 .ft-border {
-    border: 15px solid #1395E1;
+    border: 15px solid #2c92d0;
 }
 .bg-ct1 {
     background-color: #00162F;
@@ -460,38 +469,38 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 }
 /*Timeline Colors*/
 .timeline-left .timeline > li.timeline-inverted > .timeline-panel:after {
-    border-left-color: #1395E1;
-    border-right-color: #1395E1;
+    border-left-color: #2c92d0;
+    border-right-color: #2c92d0;
 }
 .timeline-left .timeline > li > .timeline-sep-title > .timeline-top-title {
-    color: #1395E1;
+    color: #2c92d0;
 }
 /*Ministries Shortcode*/
 .ministries-category-list a:hover,
 .ministries-category-list .active a,
 .ministries-box-style-2 .ministries-icon-img-wrap img {
-    background: #1395E1;
+    background: #2c92d0;
 }
 .ministries-box-style-2 .ministries-link .link {
-    color: #1395E1;
+    color: #2c92d0;
 }
 .ministries-box-style-2 {
-	border-bottom-color: #1395E1 !important;
+	border-bottom-color: #2c92d0 !important;
 }
 
 .ministries-box-style-3 .ministries-title:before {
-	background: #1395E1;
+	background: #2c92d0;
 }
 .ministries-box-style-3::before {
-    border-top: 4px solid #1395E1;
-    border-bottom: 4px solid #1395E1;
+    border-top: 4px solid #2c92d0;
+    border-bottom: 4px solid #2c92d0;
 }
 .ministries-box-style-3::after {
-	border-left: 4px solid #1395E1;
-    border-right: 4px solid #1395E1;
+	border-left: 4px solid #2c92d0;
+    border-right: 4px solid #2c92d0;
 }
 .ministries-box-style-4 .invisible-number {
-	background: #1395E1;
+	background: #2c92d0;
 }
 /*Events Shortcode*/
 .events-style-1 .events-item .event-date,
@@ -500,7 +509,7 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 .events-style-2 .events-details .read-more a,
 .events-style-3 .events-details .read-more a,
 .events-style-4 .events-details .read-more a {
-    color: #1395E1;
+    color: #2c92d0;
 }
 .events-style-1 .events-item .event-date::before,
 .events-style-1 .events-item .event-date::after,
@@ -508,22 +517,22 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 .events-style-2 .events-details .event-date::after,
 .events-style-3 .events-inner .event-date,
 .events-style-4 .events-inner .event-date {
-	background: #1395E1;
+	background: #2c92d0;
 }
 .events-style-4 .events-inner .events-details .event-title {
-	border-left: dotted 4px #1395E1;
+	border-left: dotted 4px #2c92d0;
 }
 .event-info h4, .event-venue h4, .event-contact-title h4 {
-    background-color: #1395E1;
+    background-color: #2c92d0;
 }
 /*Blog Shortcode*/
 .tag-cloud a.tag-cloud-link:hover,
 .blog-grid .post-meta li a.author-name,
 .blog-list .blog-inner .post-date a {
-    background: #1395E1;
+    background: #2c92d0;
 }
 .blog-list .blog-link a {
-    border-bottom: solid 2px #1395E1;
+    border-bottom: solid 2px #2c92d0;
 }
 .category-list > li {
     border-bottom: 1px dashed #eaeaea;
@@ -531,15 +540,15 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 .category-list > li > a:hover,
 .category-list > li > a:before,
 .blog-list .blog-link .link {
-    color: #1395E1;
+    color: #2c92d0;
 }
 /*Accordion Shortcode*/
 .accordion-style-2 .card.accordion-panel .card-inner {
-	border-top: 3px solid #1395E1;
+	border-top: 3px solid #2c92d0;
 }
 /*Counter Colors*/
 span.v-border, .counter-value.h-border:before {
-    background: #1395E1;
+    background: #2c92d0;
 }
 /*Day Counter Colors*/
 .day-counter-2 .counter-elements::after,
@@ -549,18 +558,18 @@ span.v-border, .counter-value.h-border:before {
 /*Tab Colors*/
 
 .tab-body.tab-style-3 .nav-tabs .nav-link.active::after {
-    border-top-color: #1395E1;
+    border-top-color: #2c92d0;
 }
 .tab-body.tab-style-5 .nav-tabs .nav-link.active {
-    color: #1395E1;
+    color: #2c92d0;
 }
 /*Progress Colors*/
 .progress-bar,
 .campaigns-link a {
-    background: #1395E1;
+    background: #2c92d0;
 }
 .campaign-time-left .days-left {
-	color: #1395E1;
+	color: #2c92d0;
 }
 /*Footer Colors*/
 .footer-middle-wrap .widget-title .title::before,
@@ -568,58 +577,58 @@ span.v-border, .counter-value.h-border:before {
 .v-sticky-main-wrapper .widget-title .title::after,
 .v-sticky-main-wrapper .widget-title .title::before,
 footer .social-icons a:hover {
-	background: #1395E1;
+	background: #2c92d0;
 }
 .menu-quick-links ul li a:before,
 .recent-posts .footer-list-posts > li .post-date::before,
 .footer-text a {
-	color: #1395E1;
+	color: #2c92d0;
 }
 /*Widget Colors*/
 .contact-widget-info>p>span:before,
 .side-noimg span,
 .widget.archives ul li a:hover {
-	color: #1395E1;
+	color: #2c92d0;
 }
 .sidebar .widget-title .title:before,
 .sidebar .widget-title .title:after,
 .subscribe-form .input-group-btn button {
-    background: #1395E1;
+    background: #2c92d0;
 }
 /*Selectors Colors*/
 ::selection {
-	background: #1395E1;
+	background: #2c92d0;
     color: #fff;
     text-shadow: none;                                                                  
 }
 ::-moz-selection {
-    background: #1395E1;
+    background: #2c92d0;
     color: #fff;
     text-shadow: none;
 }
 ::-webkit-selection {
-    background: #1395E1;
+    background: #2c92d0;
     color: #fff;
     text-shadow: none;
 }
 .video-icon a.popup-youtube,
 .video-icon a.popup-youtube::before,
 .video-icon a.popup-youtube::after {
-	background: #1395E1;
+	background: #2c92d0;
 }
 .sermon-view-wrapper,
 .sermon-play-list li a, .sermon-tool-list li a,
 .nav.pagination > li.nav-item a,
 .sermon-grid-2 .sermon-inner .sermon-link > a {
-	background: #1395E1;
+	background: #2c92d0;
 }
 .sermon-info a, .sermon-grid-2 .sermon-inner .sermon-link > a.btn-link,
 .single-sermon .sermon-play-list li a:hover i, 
 .single-sermon .sermon-tool-list li a:hover i {
-    color: #1395E1;
+    color: #2c92d0;
 }
 .donate-form .donation-fields .donation_amount:checked {
-    background: #1395E1;
+    background: #2c92d0;
 }
 /* new*/
 .ministries-box-style-2 .ministries-inner .ministries-thumb::before {
@@ -629,10 +638,10 @@ footer .social-icons a:hover {
 	background: rgba(191,10,48,0.89);
 }
 .Concept-SubTitle{
-	color:#1395E1;
+	color:#2c92d0;
 }
 .rev-btn {
-    background-color: #1395E1 !important;
+    background-color: #2c92d0 !important;
 }
 .events-style-1 .events-item .event-date,.events-style-2 .events-details .event-date {
     background: rgba(191,10,48,0.13);
@@ -644,7 +653,7 @@ footer .social-icons a:hover {
 	background: rgb(191,10, 48, 0.8);
 }
 .header-4 .main-logo::before{
-	background: #1395E1;
+	background: #2c92d0;
 }
 .f-list-4 .feature-list-icon span.bg-gd-1 {
     background-image: linear-gradient(135deg, #8134F0 0%, #DD08D3 100%);
@@ -657,27 +666,27 @@ footer .social-icons a:hover {
 }
 @media only screen and (max-width: 1024px) {
 	.menu-item a.contact-icon i {
-		color: #1395E1;
+		color: #2c92d0;
 	}
 }
 /* Accordion */
 .accordion-button:not(.collapsed),
 .accordion.model-1 .accordion-item a.accordion-button::before {
-    background: #1395E1;
+    background: #2c92d0;
 }
 
 .service-box-style-2 .service-main-content > .service-link a,
 .service-box-style-2 .service-overlay-content .service-link a,
 .service-sidebar-wrap .sidebar-title::before {
-    background: #1395E1;
+    background: #2c92d0;
 }
 
 .filter-button.active,
 .filter-button.btn-default:hover,
 .filter-button.btn-default:focus {
-    background: #1395E1 !important;
-    border-color: #1395E1 !important;
+    background: #2c92d0 !important;
+    border-color: #2c92d0 !important;
 }
 .filter-button::before {
-    border-top: 8px solid #1395E1;
+    border-top: 8px solid #2c92d0;
 }

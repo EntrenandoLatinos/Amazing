@@ -4,7 +4,14 @@
 
 {% block head_title %}{{ block.super }} Home{% endblock head_title %}
 
-{% block extra_styles %}{% endblock extra_styles %}
+{% block extra_styles %}
+<style>
+    .tp-leftarrow,
+    .tp-rightarrow {
+        display: none !important;
+    }
+</style>
+{% endblock extra_styles %}
 
 {% block content %}
 
@@ -36,13 +43,21 @@
 {% include 'app_core/snippets/portafolio.html' %}
 <!-- end Portafolio -->
 
-<!-- start Testimonials -->
-{% include 'app_core/snippets/testimonials.html' %}
-<!-- end Testimonials -->
+<!-- start Counters -->
+{% include 'app_core/snippets/counters.html' %}
+<!-- end Counters -->
 
 <!-- start Partners -->
 {% include 'app_core/snippets/partners.html' %}
 <!-- end Partners -->
+
+<!-- start Testimonials -->
+{% include 'app_core/snippets/testimonials.html' %}
+<!-- end Testimonials -->
+
+<!-- start Top Page -->
+{% include 'app_core/snippets/top_page.html' %}
+<!-- end Top Page -->
 
 {% endblock content %}
 
