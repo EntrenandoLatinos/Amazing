@@ -90,19 +90,21 @@
         <a href="#" class="zmm-close close"></a>
         <div class="zmm-inner bg-white typo-dark">
             <div class="text-center mobile-logo-part margin-bottom-30">
-                 <a href="index.html" class="img-before"><img src="{% static 'app_core/images/logo5.png' %}" class="img-fluid changeable-dark" width="115" height="50" alt="Logo"></a>
+                 <a href="{% url 'app_core:index' %}" class="img-before"><img src="{% static 'app_core/images/logo5.png' %}" class="img-fluid changeable-dark" width="115" height="50" alt="Logo"></a>
             </div>
             <div class="zmm-main-nav">
             </div>            
-			<div class="search-form-wrapper margin-top-30">
-			    <form class="search-form" role="search">
-			        <div class="input-group add-on">
-			            <input class="form-control" placeholder="Search for.." name="srch-term" type="text">
-			            <div class="input-group-btn">
-			                <button class="btn btn-default search-btn" type="submit"><i class="ti-arrow-right"></i></button>
-			            </div>
-			        </div>
-			    </form>
+			<div class="text-center margin-top-30">
+			    <div class="contact-info">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons mb-3 mt-4">
+                        <a href="javascript:;" class="social-fb"><span class="ti-facebook socialCustom"></span><div class="hover-circle"></div></a>
+                        <a href="javascript:;" class="social-twitter"><span class="ti-twitter socialCustom"></span><div class="hover-circle"></div></a>
+                        <a href="javascript:;" class="social-instagram"><span class="ti-instagram socialCustom"></span><div class="hover-circle"></div></a>
+                        <a href="javascript:;" class="social-pinterest"><span class="ti-pinterest socialCustom"></span><div class="hover-circle"></div></a>
+                        <a href="javascript:;" class="social-fb"><i class="fab fa-tiktok socialCustom"></i><div class="hover-circle"></div></a>
+                    </div> 
+                </div>
 			</div>
         </div>
     </div>

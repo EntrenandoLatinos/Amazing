@@ -17,6 +17,9 @@ Open Street Map
         height: 450px;
         z-index: 5;
     }
+    .leaflet-control-layers-list {
+        padding: 0 0;
+    }
 </style>
 {% endblock extra_styles %}
 
@@ -73,7 +76,7 @@ Open Street Map
     var map = L.map('map', {
         scrollWheelZoom: false,
         attributionControl: false
-    }).setView(markerLocation, 17); // Definimos el centro y el nivel de zoom inicial
+    }).setView(markerLocation, 16); // Definimos el centro y el nivel de zoom inicial
 
     // Agregamos el mapa de OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -101,7 +104,7 @@ Open Street Map
     
     // Creamos un botón personalizado para redirigir al marcador
     var goToMarkerButton = L.easyButton('fa-location-arrow', function(btn, map){
-        map.setView(marker.getLatLng(), 17); // Centra el mapa en la ubicación del marcador con un zoom de 17
+        map.setView(marker.getLatLng(), 16); // Centra el mapa en la ubicación del marcador con un zoom de 17
     });
     goToMarkerButton.addTo(map);
     // Crear un botón personalizado

@@ -104,7 +104,7 @@
                                 <li class="list-item">
                                     <ul class="nav navbar-main theme-main-menu">
                                         <li class="menu-item"><a href="{% url 'app_core:index' %}">Home</a></li>
-                                        <li class="menu-item"><a href="javascript:;">About Us</a></li>
+                                        <li class="menu-item"><a href="{% url 'app_core:about' %}">About Us</a></li>
                                         <li class="dropdown cus-img-menu dropdown-sub"><a href="index.html">Services</a>
                                             <ul class="dropdown-menu mega-dropdown-menu basic-container dropdown-col-3 clearfix">
                                                 
@@ -150,16 +150,37 @@
                                                 
                                             </ul>
                                         </li>
+                                        <li class="menu-item"><a href="{% url 'app_core:works' %}">Works</a></li>
                                         <li class="dropdown relative menu-item-logo d-none d-lg-block">
                                             <div class="main-logo">
                                             <a href="{% url 'app_core:index' %}" class="logo-general"><img src="{% static 'app_core/images/logo2.png' %}" class="img-fluid" width="115" height="50" alt="Logo" /></a>
                                             <a href="{% url 'app_core:index' %}" class="logo-sticky"><img src="{% static 'app_core/images/logo2.png' %}" class="img-fluid changeable-dark" width="103" height="45" alt="Logo" /></a>
                                             </div>
                                         </li>
-                                        <li class="menu-item"><a href="javascript:;">Works</a></li>
-                                        <li class="menu-item"><a href="javascript:;">FAQ's</a></li>
+                                        <li class="menu-item"><a href="{% url 'app_core:faq' %}">FAQ's</a></li>
                                         <li class="menu-item"><a href="{% url 'app_core:contact' %}">Contact</a></li>
-                                        <li class="menu-item"><a href="javascript:;">Privacy</a></li>
+                                        <li class="menu-item"><a href="{% url 'app_core:privacy' %}">Privacy</a></li>
+                                        <!--Nav Item-->
+                                        <li class="list-item">
+                                            <a href="#" class="full-view-switch text-center">
+                                                <!-- <i class="ti-search"></i> -->
+                                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!--Search-->
+                                            <div class="full-view-wrapper hide">
+                                                <a href="#" class="close full-view-close"></a>
+                                                <div class="social-icons mt-2">
+                                                    <a href="javascript:;" class="social-fb"><span class="ti-facebook socialCustom"></span><div class="hover-circle"></div></a>
+                                                    <a href="javascript:;" class="social-twitter"><span class="ti-twitter socialCustom"></span><div class="hover-circle"></div></a>
+                                                    <a href="javascript:;" class="social-instagram"><span class="ti-instagram socialCustom"></span><div class="hover-circle"></div></a>
+                                                    <a href="javascript:;" class="social-pinterest"><span class="ti-pinterest socialCustom"></span><div class="hover-circle"></div></a>
+                                                    <a href="javascript:;" class="social-fb"><i class="fab fa-tiktok socialCustom"></i><div class="hover-circle"></div></a>
+                                                </div> 
+                                            </div>
+                                        </li>
+                                        <li class="menu-item"><a href="javascript:;"><i class="fa fa-sign-in-alt" style="font-size: 18px;"></i></a></li>
                                     </ul>
                                 </li>
                                 <!--List Item End-->
@@ -167,15 +188,7 @@
                             <!-- Menu -->                                                                                
                         </div>
                     </div>
-                    <!--Search-->
-                    <div class="full-view-wrapper hide">
-                        <a href="#" class="close full-view-close"></a>
-                        <form class="navbar-form search-form" role="search">
-                            <div class="input-group">
-                                <input class="form-control" placeholder="Search hit enter.." name="srch-term" type="text">
-                            </div>
-                        </form>
-                    </div>
+
                 </nav>
             </div>
             <!--sticky-head-->

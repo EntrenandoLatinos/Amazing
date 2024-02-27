@@ -137,7 +137,7 @@ LOGIN_REDIRECT_URL = 'app_user:login-redirect'
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 # ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_RATE_LIMITS = {
-    'login_failed': {'limit': 6, 'timeout': 300},  # 6 intentos de inicio de sesión fallidos en 5 minutos
+    'login_failed': {'limit': 6, 'timeout': 300},
 }
 ACCOUNT_USERNAME_MIN_LENGTH = 4
 # ACCOUNT_USERNAME_REQUIRED = False
