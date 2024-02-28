@@ -4,7 +4,16 @@
 
 {% block head_title %}{{ block.super }} About{% endblock head_title %}
 
-{% block extra_styles %}{% endblock extra_styles %}
+{% block extra_styles %}
+<style>
+    .col-lg-4:hover .feature-title h4 {
+        color: white;
+    }
+    .col-lg-4:hover .feature-content p {
+        color: rgb(228, 228, 228);
+    }
+</style>
+{% endblock extra_styles %}
 
 {% block content %}
 

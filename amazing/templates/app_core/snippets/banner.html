@@ -11,13 +11,20 @@
                 data-out="a:false;">
                 <img src="{% static 'app_core/rs-plugin/assets/dummy.png' %}" alt=""
                     class="rev-slidebg tp-rs-img rs-lazyload"
-                    data-lazyload="{% static 'app_core/rs-plugin/assets/banner2.webp' %}" data-no-retina>
+                    data-lazyload="{{banner.image.url}}" data-no-retina>
 
                 <h1 id="slider-8-slide-20-layer-2" class="rs-layer" data-type="text" data-color="rgba(255,255,255,1)"
                     data-rsp_ch="on" data-xy="x:c;y:c;yo:-60px;" data-text="s:90;l:90;fw:700;" data-frame_0="y:100%;"
                     data-frame_0_mask="u:t;y:100%;" data-frame_1="e:power2.inOut;st:1300;sp:1200;"
                     data-frame_1_mask="u:t;" data-frame_999="o:0;e:nothing;st:0;"
-                    style="z-index:8;font-family:'Oswald';">THE BEST ROOFING <br>TEAM IN THE U.S.A.
+                    style="z-index:8;font-family:'Oswald';">
+                    {% if banner.title1 %}
+                        {{banner.title1}}
+                    {% endif %}
+                    <br>
+                    {% if banner.title2 %}
+                        {{banner.title2}}
+                    {% endif %}
                 </h1>
 
                 <rs-layer id="slider-8-slide-20-layer-6" class="tp-shape tp-shapewrapper" data-type="shape"
@@ -31,7 +38,11 @@
                     data-color="rgba(255,255,255,1)" data-rsp_ch="on" data-xy="x:c;y:c;yo:-250px;"
                     data-text="w:normal;s:60;l:30;ls:10px;a:center;" data-dim="w:1000px;h:24px;" data-frame_0="y:100%;"
                     data-frame_1="e:power4.inOut;st:1270;sp:2000;" data-frame_999="o:0;e:nothing;st:0;" style="z-index:9;font-family:'Oswald';position:absolute;text-shadow:0px 2px 5px rgba(0, 0, 0, 0.5);
-                    margin:0px; white-space:nowrap;">CONTACT US NOW!
+                    margin:0px; white-space:nowrap;">
+                    {% if banner.subtitle %}
+                        {{banner.subtitle}}
+                    {% endif %}
+                         
                 </rs-layer>
 
                 <rs-layer id="slider-8-slide-20-layer-8" data-type="text" data-color="rgba(255,255,255,1)"

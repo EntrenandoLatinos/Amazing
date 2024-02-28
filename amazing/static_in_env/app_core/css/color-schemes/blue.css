@@ -105,6 +105,9 @@ footer.bg-overlay-dark a:hover, footer.bg-overlay-light a:hover,
 .colorGray{
     color: #ebebeb;
 }
+.colorBlack{
+    color: black;
+}
 .theme-color, 
 .typo-white .theme-color,
 .typo-dark .theme-color,

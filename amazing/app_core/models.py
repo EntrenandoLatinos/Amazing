@@ -35,6 +35,7 @@ class AuditoriaFecha(models.Model):
 
 class Contact(AuditoriaFecha):
     location = models.CharField("Location", max_length=100, null=True, blank=True)
+    city = models.CharField("City", max_length=100, null=True, blank=True)
     phone1 = models.CharField("Phone 2", max_length=60, null=True, blank=True)
     phone2 = models.CharField("Phone 1", max_length=60, null=True, blank=True)
     email = models.EmailField("Email", null=True, blank=True)
@@ -51,10 +52,12 @@ class Contact(AuditoriaFecha):
 
 class Banner(AuditoriaFecha):
     image = models.ImageField(upload_to='banner/', null=True, blank=True)
-    title = models.CharField("Banner title", max_length=30, null=True, blank=True, default="")
+    title1 = models.CharField("Banner title 1", max_length=30, null=True, blank=True, default="")
+    title2 = models.CharField("Banner title 2", max_length=30, null=True, blank=True, default="")
     subtitle = models.CharField("Banner subtitle", max_length=30, null=True, blank=True, default="")
     description = models.TextField("Description", max_length=73, null=True, blank=True)
-    insurance = models.CharField("Insurance", max_length=100, null=True, blank=True, default="")
+    insurance1 = models.CharField("Insurance 1", max_length=100, null=True, blank=True, default="")
+    insurance2 = models.CharField("Insurance 2", max_length=100, null=True, blank=True, default="")
 
     def __str__(self):
         return "{0}".format(str(self.title))
@@ -65,7 +68,8 @@ class Banner(AuditoriaFecha):
         verbose_name_plural = 'Banners'
     
 class About(AuditoriaFecha):
-    image = models.ImageField(upload_to='about/', null=True, blank=True)
+    image1 = models.ImageField(upload_to='about/', null=True, blank=True)
+    image2 = models.ImageField(upload_to='about/', null=True, blank=True)
     about = RichTextField("About", null=True, blank=True)
     mision = RichTextField("Mission", null=True, blank=True)
     vision = RichTextField("Vision", null=True, blank=True)

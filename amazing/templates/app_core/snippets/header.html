@@ -50,8 +50,8 @@
                                     <i class="ti-map-alt align-middle me-2"></i>
                                 </span>
                                 <div class="media-body d-inline-block align-middle">
-                                    <h6 class="mb-0 colorWhite">No. 12, Ribon Building,</h6> 
-                                    <p class="mb-0 mt-1 colorGray">Walse street, Australia.</p>
+                                    <h6 class="mb-0 colorWhite">{{contact.location}},</h6> 
+                                    <p class="mb-0 mt-1 colorGray">{{contact.city}}.</p>
                                 </div>
                             </div>
                             <!-- Media End -->
@@ -65,8 +65,8 @@
                                     <i class="ti-time align-middle me-2"></i>
                                 </span>
                                 <div class="media-body d-inline-block align-middle">
-                                    <h6 class="mb-0 colorWhite">Monday-Friday: 9am to 5pm</h6> 
-                                    <p class="mb-0 mt-1 colorGray">Saturday / Sunday: Closed</p>
+                                    <h6 class="mb-0 colorWhite">Mon-Sat: 7am to 7pm</h6> 
+                                    <p class="mb-0 mt-1 colorGray">Sunday: Closed</p>
                                 </div>
                             </div>
                             <!-- Media End -->
@@ -80,8 +80,8 @@
                                     <i class="ti-headphone-alt align-middle me-2"></i>
                                 </span>
                                 <div class="media-body d-inline-block align-middle">
-                                    <h6 class="mb-0"><a href="tel:+(528)456-7592" class="mb-0 mt-1" style="color: white;">+(528) 456-7592</a></h6> 
-                                    <a href="mailto:info@example.com" class="mb-0 mt-1" style="color: #ebebeb;">info@example.com</a>
+                                    <h6 class="mb-0"><a href="tel:{{contact.phone1}}" class="mb-0 mt-1" style="color: white;">+(1) {{contact.phone1}}</a></h6> 
+                                    <a href="mailto:info@example.com" class="mb-0 mt-1" style="color: #ebebeb;">{{contact.email}}</a>
                                 </div>
                             </div>
                             <!-- Media End -->
@@ -180,7 +180,7 @@
                                                 </div> 
                                             </div>
                                         </li>
-                                        <li class="menu-item"><a href="javascript:;"><i class="fa fa-sign-in-alt" style="font-size: 18px;"></i></a></li>
+                                        <li class="menu-item"><a href="{% url 'account_login' %}"><i class="fa fa-sign-in-alt" style="font-size: 18px;"></i></a></li>
                                     </ul>
                                 </li>
                                 <!--List Item End-->

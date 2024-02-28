@@ -13,9 +13,10 @@ SOCIAL_MEDIA_CHOICES = [
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = ['location', 'phone1', 'phone2', 'email', 'latitude', 'longitude']
+        fields = ['location', 'city', 'phone1', 'phone2', 'email', 'latitude', 'longitude']
         widgets = {
             'location': forms.TextInput(attrs={'class': 'form-control'}),
+            'city': forms.TextInput(attrs={'class': 'form-control'}),
             'phone1': forms.TextInput(attrs={'class': 'form-control'}),
             'phone2': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control', 'type': 'email'}),
@@ -26,18 +27,20 @@ class ContactForm(forms.ModelForm):
 class BannerForm(forms.ModelForm):
     class Meta:
         model = Banner
-        fields = ['image', 'title', 'subtitle', 'description', 'insurance']
+        fields = ['image', 'title1', 'title2', 'subtitle', 'description', 'insurance1', 'insurance2']
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'title1': forms.TextInput(attrs={'class': 'form-control'}),
+            'title2': forms.TextInput(attrs={'class': 'form-control'}),
             'subtitle': forms.TextInput(attrs={'class': 'form-control'}),
             'description': forms.Textarea(attrs={'class': 'resizable_textarea form-control'}),
-            'insurance': forms.TextInput(attrs={'class': 'form-control'}),
+            'insurance1': forms.TextInput(attrs={'class': 'form-control'}),
+            'insurance2': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
 class AboutForm(forms.ModelForm):
     class Meta:
         model = About
-        fields = ['image', 'about', 'mision', 'vision']
+        fields = ['image1', 'image2', 'about', 'mision', 'vision']
 
 class SkillForm(forms.ModelForm):
     class Meta:

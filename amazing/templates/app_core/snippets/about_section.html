@@ -12,7 +12,7 @@
                         <div class="feature-box-wrap f-box-style-3 relative">
                             <div class="feature-box-details">											
                                 <div class="feature-icon mb-3">
-                                    <span class="ti-flag-alt b-radius-50"></span>
+                                    <span class="ti-flag-alt b-radius-50 span_about"></span>
                                 </div>
                                 <div class="feature-content">
                                     <div class="feature-title text-center relative margin-bottom-10">
@@ -75,7 +75,7 @@
                                     <!-- about button -->
                                     <div class="text-center">
                                         <div class="about-img mb-4 mb-md-0">
-                                            <img src="{% static 'app_core/images/about-us/builder-women.png' %}" width="430" height="580" class="" alt="about-img">
+                                            <img src="{{about.image2.url}}" width="430" height="580" class="" alt="about-img">
                                         </div>
                                         <!-- .col -->
                                     </div>
@@ -95,7 +95,7 @@
                                 <span class="border-bottom"></span>
                             </div>
                             <div class="pad-top-15">
-                                <p class="margin-bottom-20">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.</p>                                            
+                                <div class="margin-bottom-20">{{about.about|safe}}</div>
                             </div>
                         </div>
                         <div class="row">
@@ -108,9 +108,9 @@
                                         </div>
                                         <div class="feature-content">
                                             <div class="feature-title relative margin-bottom-10">
-                                                <h4>Innovation & Quality</h4>
+                                                <h4>Mission</h4>
                                             </div>
-                                            <p class="mb-0">In Zegen you will feel divinity, piety, goodness, faith or right beliefs.</p>
+                                            <div class="mb-0">{{about.mision|safe}}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -125,9 +125,9 @@
                                         </div>
                                         <div class="feature-content">
                                             <div class="feature-title relative margin-bottom-10">
-                                                <h4>Passionate Team</h4>
+                                                <h4>Vision</h4>
                                             </div>
-                                            <p class="mb-0">Learn the Bible enhance your wisdom, give you boldness about your faith.</p>
+                                            <div class="mb-0">{{about.vision|safe}}</div>
                                         </div>
                                     </div>
                                 </div>
