@@ -3,10 +3,10 @@ __pycache__/
 *.pyc
 
 #App migrations and media folders
-dvine/app_core/migrations/
-dvine/app_user/migrations/
-dvine/media/
-dvine/static/
+amazing/app_core/migrations/
+amazing/app_user/migrations/
+amazing/media/
+amazing/static/
 
 # Archivos de migraciones
 migrations/*
