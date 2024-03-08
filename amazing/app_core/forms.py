@@ -10,6 +10,14 @@ SOCIAL_MEDIA_CHOICES = [
     ('06', 'LinkedIn'),
 ]
 
+STARS_REVIEW_CHOICES = [
+    ('1', '1'),
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '4'),
+    ('5', '5'),
+]
+
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
@@ -89,12 +97,20 @@ class SubServiceForm(forms.ModelForm):
         }
 
 class TestimonialForm(forms.ModelForm):
+    stars = forms.ChoiceField(
+        choices=STARS_REVIEW_CHOICES, 
+        label='Stars', 
+        required=True,
+        widget=forms.Select(attrs={'class': 'form-control'})
+        )
     class Meta:
         model = Testimonial
-        fields = ['image', 'name', 'location', 'description']
+        fields = ['image', 'name', 'location', 'stars', 'url', 'description']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
             'location': forms.TextInput(attrs={'class': 'form-control'}),
+            'stars': forms.Select(attrs={'class': 'form-control'}),
+            'url': forms.TextInput(attrs={'class': 'form-control', 'type': 'url'}),
             'description': forms.Textarea(attrs={'class': 'resizable_textarea form-control'}),
         }
 
@@ -128,11 +144,16 @@ class WorkForm(forms.ModelForm):
         fields = ['image']
 
 class SocialMediaForm(forms.ModelForm):
-    name = forms.ChoiceField(choices=SOCIAL_MEDIA_CHOICES, label='Name', required=True)
+    name = forms.ChoiceField(
+        choices=SOCIAL_MEDIA_CHOICES, 
+        label='Name', 
+        required=True,
+        widget=forms.Select(attrs={'class': 'form-control'})
+        )
     class Meta:
         model = SocialMedia
         fields = ['name', 'url']
         widgets = {
             'name': forms.Select(attrs={'class': 'form-control'}),
-            'url': forms.TextInput(attrs={'class': 'fom-rcontrol', 'type': 'url'}),
+            'url': forms.TextInput(attrs={'class': 'form-control', 'type': 'url'}),
         }

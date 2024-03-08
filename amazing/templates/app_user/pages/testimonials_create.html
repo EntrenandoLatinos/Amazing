@@ -14,4 +14,40 @@
 
 {% endblock content %}
 
-{% block extra_javascript %}{% endblock extra_javascript %}
+{% block extra_javascript %}
+<script>
+    window.onload = function() {
+        // Obtener los campos de entrada
+        var urlInput = document.querySelector('input[name="url"]');
+        var imageInput = document.querySelector('input[name="image"]');
+        var nameInput = document.querySelector('input[name="name"]');
+        var locationInput = document.querySelector('input[name="location"]');
+        var starsInput = document.querySelector('select[name="stars"]');
+        var descriptionInput = document.querySelector('textarea[name="description"]');
+        
+        // Función para habilitar o deshabilitar campos según el contenido de la URL
+        function toggleFields() {
+            if (urlInput.value !== '') {
+                imageInput.disabled = true;
+                nameInput.disabled = true;
+                locationInput.disabled = true;
+                starsInput.disabled = true;
+                descriptionInput.disabled = true;
+            } else {
+                imageInput.disabled = false;
+                nameInput.disabled = false;
+                locationInput.disabled = false;
+                starsInput.disabled = false;
+                descriptionInput.disabled = false;
+            }
+        }
+        
+        // Agregar evento keyup al campo de URL
+        urlInput.addEventListener('keyup', toggleFields);
+        
+        // Llamar a la función para configurar el estado inicial de los campos
+        toggleFields();
+    };
+</script>
+
+{% endblock extra_javascript %}

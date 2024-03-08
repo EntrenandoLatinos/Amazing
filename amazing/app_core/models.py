@@ -25,6 +25,14 @@ SOCIAL_MEDIA_CHOICES = [
     ('06', 'LinkedIn'),
 ]
 
+STARS_REVIEW_CHOICES = [
+    ('1', '1'),
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '4'),
+    ('5', '5'),
+]
+
 # Create your models here.
 class AuditoriaFecha(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
@@ -198,6 +206,8 @@ class Testimonial(AuditoriaFecha):
     image = models.ImageField(upload_to='testimonial/', null=True, blank=True)
     name = models.CharField("Name", max_length=60, null=True, blank=True)
     location = models.CharField("Location", max_length=60, null=True, blank=True)
+    stars = models.CharField("Stars", max_length=1, choices=STARS_REVIEW_CHOICES, null=True, blank=True)
+    url = models.URLField("URL", null=True, blank=True)
     description = models.TextField("Description", null=True, blank=True)
 
     def __str__(self):

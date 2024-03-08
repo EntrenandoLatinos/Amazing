@@ -12,7 +12,7 @@ def index(request):
   servicios = Service.objects.all()
   works = WorkImage.objects.all().order_by('?')[:6]
   testimonials = Testimonial.objects.all()
-  partners = Partner.objects.all()
+  partners = Partner.objects.all().order_by('?')
   social_media = SocialMedia.objects.all()
   context = {
     'contact':contact,
