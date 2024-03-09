@@ -108,7 +108,7 @@ class TestimonialForm(forms.ModelForm):
         fields = ['image', 'name', 'location', 'stars', 'url', 'description']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'location': forms.TextInput(attrs={'class': 'form-control'}),
+            'location': forms.TextInput(attrs={'class': 'form-control', 'id':'position'}),
             'stars': forms.Select(attrs={'class': 'form-control'}),
             'url': forms.TextInput(attrs={'class': 'form-control', 'type': 'url'}),
             'description': forms.Textarea(attrs={'class': 'resizable_textarea form-control'}),

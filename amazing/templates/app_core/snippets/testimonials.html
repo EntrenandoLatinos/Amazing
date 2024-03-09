@@ -27,11 +27,37 @@
                                     <div class="testimonial-details text-left">															
                                         <div class="star-rating">
                                             <ul>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
-                                                <li><i class="fa fa-star"></i></li>
+                                                {% if testimonio.stars == '1' %}
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                {% elif testimonio.stars == '2' %}
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                {% elif testimonio.stars == '3' %}
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                {% elif testimonio.stars == '4' %}
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                {% elif testimonio.stars == '5' %}
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                {% endif %}
                                             </ul>
                                         </div>
                                         <div class="testimonial-description margin-top-15">
@@ -51,7 +77,13 @@
                                                 <h4 class="mb-1">{{testimonio.name}}</h4> 
                                                 <!-- Company -->																 
                                                 <div class="client-designation theme-color">
-                                                    {{testimonio.location}}
+                                                    {% if testimonio.url %}
+                                                        <a href="{{testimonio.url}}" target="_blank">
+                                                            <img src="{% static 'app_core/images/google_business.webp' %}" alt="revie_google_business">
+                                                        </a>
+                                                    {% elif testimonio.location %}
+                                                        {{testimonio.location}}
+                                                    {% endif %}
                                                 </div>	
                                             </div>
                                         </div>																											
