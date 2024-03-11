@@ -66,14 +66,17 @@ class SkillForm(forms.ModelForm):
 class CounterForm(forms.ModelForm):
     class Meta:
         model = Counter
-        fields = ['title1', 'number1', 'title2', 'number2', 'title3', 'number3']
+        fields = ['title1', 'number1', 'symbol1', 'title2', 'number2', 'symbol2', 'title3', 'number3', 'symbol3']
         widgets = {
             'title1': forms.TextInput(attrs={'class': 'form-control'}),
             'number1': forms.NumberInput(attrs={'class': 'form-control', 'type': 'number'}),
+            'symbol1': forms.TextInput(attrs={'class': 'form-control'}),
             'title2': forms.TextInput(attrs={'class': 'form-control'}),
             'number2': forms.NumberInput(attrs={'class': 'form-control', 'type': 'number'}),
+            'symbol2': forms.TextInput(attrs={'class': 'form-control'}),
             'title3': forms.TextInput(attrs={'class': 'form-control'}),
             'number3': forms.NumberInput(attrs={'class': 'form-control', 'type': 'number'}),
+            'symbol3': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
 class ServiceForm(forms.ModelForm):
@@ -82,7 +85,6 @@ class ServiceForm(forms.ModelForm):
         fields = ['image', 'title', 'description', 'description_finish']
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'description_finish': forms.Textarea(attrs={'class': 'resizable_textarea form-control'}),
         }
 
 class ServiceDeleteForm(forms.Form):

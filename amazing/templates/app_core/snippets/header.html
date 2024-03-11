@@ -80,7 +80,9 @@
                                     <i class="ti-headphone-alt align-middle me-2"></i>
                                 </span>
                                 <div class="media-body d-inline-block align-middle">
-                                    <h6 class="mb-0"><a href="tel:{{contact.phone1}}" class="mb-0 mt-1" style="color: white;">+(1) {{contact.phone1}}</a></h6> 
+                                    <h6 class="mb-0">
+                                        <a href="" class="mb-0 mt-1" style="color: white;" id="contactPhone"></a>
+                                    </h6> 
                                     <a href="mailto:info@example.com" class="mb-0 mt-1" style="color: #ebebeb;">{{contact.email}}</a>
                                 </div>
                             </div>
@@ -108,45 +110,21 @@
                                         <li class="dropdown cus-img-menu dropdown-sub"><a href="index.html">Services</a>
                                             <ul class="dropdown-menu mega-dropdown-menu basic-container dropdown-col-3 clearfix">
                                                 
-                                                <li class="mega-dropdown-col">                                                                
-                                                    <div class="img-menu">
-                                                        <!--News Post-->
-                                                        <div class="img-block">
-                                                            <a href="index.html">
-                                                                <img src="{% static 'app_core/images/screenshot/gutter.webp' %}" width='400' height='500' alt="screenshot-img">
-                                                            </a>
+                                                {% for servicio in servicios %}
+                                                    <li class="mega-dropdown-col">                                                                
+                                                        <div class="img-menu">
+                                                            <!--News Post-->
+                                                            <div class="img-block">
+                                                                <a href="{% url 'app_core:services_view' servicio.id %}">
+                                                                    <img src="{{servicio.image.url}}" width='400' height='500' alt="screenshot-img">
+                                                                </a>
+                                                            </div>
+                                                            <div class="title-wrap">
+                                                                <p><a href="{% url 'app_core:services_view' servicio.id %}" class="mega-menu-title">{{servicio.title}}</a></p>
+                                                            </div>                                                                       
                                                         </div>
-                                                        <div class="title-wrap">
-                                                            <p><a href="index.html" class="mega-menu-title">Gutter</a></p>
-                                                        </div>                                                                       
-                                                    </div>
-                                                </li>
-                                                <li class="mega-dropdown-col">
-                                                    <div class="img-menu">
-                                                        <!--News Post-->
-                                                        <div class="img-block">
-                                                            <a href="index-2.html">
-                                                                <img src="{% static 'app_core/images/screenshot/roofing.webp' %}" width='400' height='500' alt="screenshot-img">
-                                                            </a>
-                                                        </div>
-                                                        <div class="title-wrap">
-                                                            <p><a href="index-2.html" class="mega-menu-title">Roofing</a></p>
-                                                        </div>                                                                       
-                                                    </div>
-                                                </li>
-                                                <li class="mega-dropdown-col">
-                                                    <div class="img-menu">
-                                                        <!--News Post-->
-                                                        <div class="img-block">
-                                                            <a href="index-3.html">
-                                                                <img src="{% static 'app_core/images/screenshot/siding.webp' %}" width='400' height='500' alt="screenshot-img">
-                                                            </a>
-                                                        </div>
-                                                        <div class="title-wrap">
-                                                            <p><a href="index-3.html" class="mega-menu-title">Siding</a></p>
-                                                        </div>                                                                       
-                                                    </div>
-                                                </li>
+                                                    </li>
+                                                {% endfor %}
                                                 
                                             </ul>
                                         </li>

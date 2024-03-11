@@ -107,12 +107,15 @@ class Skill(AuditoriaFecha):
         verbose_name_plural = 'Skills'
     
 class Counter(AuditoriaFecha):
-    title1 = models.CharField("Title 1", max_length=60, null=True, blank=True)
+    title1 = models.CharField("Title 1", max_length=300, null=True, blank=True)
     number1 = models.IntegerField("Number 1", null=True, blank=True)
-    title2 = models.CharField("Title 2", max_length=60, null=True, blank=True)
+    symbol1 = models.CharField("Symbol 1", max_length=300, null=True, blank=True)
+    title2 = models.CharField("Title 2", max_length=300, null=True, blank=True)
     number2 = models.IntegerField("Number 2", null=True, blank=True)
-    title3 = models.CharField("Title 3", max_length=60, null=True, blank=True)
+    symbol2 = models.CharField("Symbol 2", max_length=300, null=True, blank=True)
+    title3 = models.CharField("Title 3", max_length=300, null=True, blank=True)
     number3 = models.IntegerField("Number 3", null=True, blank=True)
+    symbol3 = models.CharField("Symbol 3", max_length=300, null=True, blank=True)
 
     def __str__(self):
         return "{0}".format(str(self.title1))
@@ -126,7 +129,7 @@ class Service(AuditoriaFecha):
     image = models.ImageField(upload_to='service/', null=True, blank=True)
     title = models.CharField("Service Name", max_length=60, null=True, blank=True)
     description = RichTextField("Description", null=True, blank=True)
-    description_finish = models.TextField("Finish Description", null=True, blank=True)
+    description_finish = RichTextField("Description finish", null=True, blank=True)
 
     def __str__(self):
         return "{0}".format(str(self.title))

@@ -10,23 +10,23 @@
                      <div class="col-lg-3 widget text-widget">
                         <div class="widget-title">
                             <!-- Title -->
-                            <h3 class="title typo-white">About Metal</h3>
+                            <h3 class="title typo-white">Alpha Roofing</h3>
                         </div>						
                         <!-- Text -->
                         <div class="widget-text margin-bottom-15">
-                            <p>Metal is a mobile friendly business template specially designed.</p>
+                            <p>Excellence and craftsmanship for exceptional roofing solutions.</p>
                         </div>
                         <nav>
                             <ul class="contact-info">
                                 <!-- List Items -->
                                 <li>
-                                    <i aria-hidden="true" class="ti-location-pin theme-color"></i> <span> No. 12, Ribon Building, Walse street, Australia.</span>
+                                    <i aria-hidden="true" class="ti-location-pin theme-color"></i> <span> {{contact.location}}, {{contact.city}}.</span>
                                 </li>
                                 <li>
-                                    <i aria-hidden="true" class="ti-email theme-color"></i> <a href="mailto:info@zozothemes.com"> info@zozothemes.com</a></span>
+                                    <i aria-hidden="true" class="ti-email theme-color"></i> <a href="mailto:{{contact.email}}"> {{contact.email}}</a></span>
                                 </li>
                                 <li>
-                                    <i aria-hidden="true" class="ti-headphone theme-color"></i> <a href="tel:+(123) 456-7890"> +(123) 456-7890</a></span>
+                                    <i aria-hidden="true" class="ti-headphone theme-color"></i> <a href="" id="contactPhone"> </a></span>
                                 </li>									
                             </ul>
                         </nav>
@@ -40,11 +40,9 @@
                         <!-- Text -->
                         <div class="menu-quick-links">
                             <ul class="menu">
-                                <li class="menu-item"><a href="general-contracting.html">General Contracting</a></li>
-                                <li class="menu-item"><a href="construction-consultant.html">Construction Consultant</a></li>
-                                <li class="menu-item"><a href="house-renovation.html">House Renovation</a></li>
-                                <li class="menu-item"><a href="metal-roofing.html">Metal Roofing</a></li>
-                                <li class="menu-item"><a href="green-house.html">Green House</a></li>									
+                                {% for servicio in servicios %}
+                                    <li class="menu-item"><a href="{% url 'app_core:services_view' servicio.id %}">{{servicio.title}}</a></li>    
+                                {% endfor %}
                             </ul>
                         </div>                           
                     </div>
@@ -58,13 +56,10 @@
                             <ul class="contact-info">
                                 <!-- List Items -->                                    
                                 <li class="mb-0">
-                                    <i aria-hidden="true" class="ti-time theme-color"></i> <span> Monday-Thursday: 9am to 5pm</span>
+                                    <i aria-hidden="true" class="ti-time theme-color"></i> <span> Monday-Friday: 7am to 7pm</span>
                                 </li>
                                 <li class="mb-0">
-                                    <i aria-hidden="true" class="ti-time theme-color"></i> <span> Friday : 9am to 3pm</span>
-                                </li>
-                                <li class="mb-0">
-                                    <i aria-hidden="true" class="ti-time theme-color"></i> <span> Saturday : 9am to 1pm</span>
+                                    <i aria-hidden="true" class="ti-time theme-color"></i> <span> Saturday : 8am to 1pm</span>
                                 </li>
                                 <li class="mb-0">
                                     <i aria-hidden="true" class="ti-time theme-color"></i> <span> Sunday : Closed</span>
@@ -72,10 +67,13 @@
                             </ul>
                         </nav>							
                         <div class="footer-counter counter-value mt-3">
-                            <h4><span class="counter-suffix">Total Projects : </span><span class="counter-up typo-white" data-count="3550">0</span></h4>
+                            <h4><span class="counter-suffix">{{indicators.title1}} : </span><span class="counter-up typo-white" data-count="{{indicators.number1}}">0</span>{{indicators.symbol1}}</h4>
                         </div>
                         <div class="footer-counter counter-value">
-                            <h4><span class="counter-suffix">Happy Clients : </span><span class="counter-up typo-white" data-count="2550">0</span></h4>
+                            <h4><span class="counter-suffix">{{indicators.title2}} : </span><span class="counter-up typo-white" data-count="{{indicators.number2}}">0</span>{{indicators.symbol2}}</h4>
+                        </div>
+                        <div class="footer-counter counter-value">
+                            <h4><span class="counter-suffix">{{indicators.title3}} : </span><span class="counter-up typo-white" data-count="{{indicators.number3}}">0</span>{{indicators.symbol3}}</h4>
                         </div>
                     </div>
                     <!-- Col -->
@@ -120,16 +118,16 @@
                         <ul class="footer-bottom-items pull-left">
                             <li class="nav-item">
                                 <div class="nav-item-inner">
-                                    Copyrights  © 2023 <a href="https://zozothemes.com/html/metal/index.html">Metal</a>. Designed by <a href="https://zozothemes.com/">Zozothemes</a>
+                                    © <script>document.write(new Date().getFullYear())</script> Alpha Roofing All Rights Reserved
                                 </div>
                             </li>
                         </ul>
                         <ul class="footer-bottom-items footer-menu pull-right">
                             <li class="nav-item">               
-                                <a href="#">Terms of Use</a>
+                                <a href="{% url 'app_core:works' %}">Gallery</a>
                             </li>
                             <li class="nav-item">               
-                                <a href="#">Privacy Policy</a>
+                                <a href="{% url 'app_core:privacy' %}">Privacy Policy</a>
                             </li>
                         </ul>
                     </div>

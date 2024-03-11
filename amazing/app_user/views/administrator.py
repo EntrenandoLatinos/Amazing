@@ -125,7 +125,6 @@ def service_update(request, pk):
         if 'update_service' in request.POST:
             service_form = ServiceForm(request.POST, request.FILES, instance=service, prefix='service_update')
             if service_form.is_valid():
-                print("Almenos esntramos aqui")
                 service_form.save()
                 return redirect('app_user:services')
         elif 'delete_service' in request.POST:

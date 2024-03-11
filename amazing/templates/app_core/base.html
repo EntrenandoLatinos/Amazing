@@ -242,6 +242,31 @@
             link_body_web.style.display = 'none';
         }
         });
+
+        function formatPhoneNumber(phoneNumberInput) {
+            // Elimina todos los caracteres no numéricos del número de teléfono
+            var cleanedPhoneNumber = phoneNumberInput.replace(/\D/g, '');
+
+            // Formatea el número de teléfono en el formato deseado
+            var formattedPhoneNumber = '(' + cleanedPhoneNumber.substring(0, 3) + ') ' +
+                                        cleanedPhoneNumber.substring(3, 6) + '-' +
+                                        cleanedPhoneNumber.substring(6);
+
+            return formattedPhoneNumber;
+        }
+
+        var phoneNumber = "{{contact.phone1}}";
+        var telCliente = formatPhoneNumber(phoneNumber);
+
+        // Seleccionar todas las etiquetas <a> con el id "contactPhone"
+        var contactPhones = document.querySelectorAll("#contactPhone");
+        // Iterar sobre todas las etiquetas seleccionadas
+        contactPhones.forEach(function(contactPhone) {
+            // Establece el número como el texto del enlace
+            contactPhone.textContent = telCliente;
+            // Establece el número como el atributo href del enlace (para hacerlo un enlace telefónico)
+            contactPhone.href = "tel:" + phoneNumber;
+        });
     </script>
     {% block extra_javascript %}{% endblock extra_javascript %}
 </body>

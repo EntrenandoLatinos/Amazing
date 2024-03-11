@@ -18,77 +18,37 @@
                 <div class="filter-style-2" align="center">
                     <div class="filter-wrap">
                         <button class="btn btn-default filter-button active" data-filter="all">All</button>
-                        <button class="btn btn-default filter-button" data-filter="roofing">Roofing</button>
-                        <button class="btn btn-default filter-button" data-filter="siding">Siding</button>
-                        <button class="btn btn-default filter-button" data-filter="gutter">Gutter</button>
+                        {% for servicio in servicios %}
+                            <button class="btn btn-default filter-button" data-filter="{{servicio.title}}">{{servicio.title}}</button>    
+                        {% endfor %}
                     </div>
                 </div>
                 <br>
-
-                <!-- .portfolio-item -->
-                <div class="portfolio-item portfolio-overlay-wrap col-lg-4 col-md-6 col-sm-12 col-xs-12 filter roofing">
-                    <!-- .portfolio-thumb -->
-                    <div class="portfolio-thumb relative">
-                        <img src="{% static 'app_core/images/portfolio/portfolio-grid/grid2/RoofingService.webp' %}" class="img-fluid" alt=""
-                            title="Invest Advices" />
-                        <!-- .portfolio-wrap -->
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-details-overlay">
-                                <h3 class="mb-3"><a href="single-project.html" target="_blank">Roofing</a>
-                                </h3>
-                                <div class="portfolio-icons">
-                                    <a href="single-project.html" class="link-icon" target="_blank">
-                                        <i class="icon-link colorWhite"></i>
+                {% for servicio in servicios %}
+                    <div class="portfolio-item portfolio-overlay-wrap col-lg-4 col-md-6 col-sm-12 col-xs-12 filter {{servicio.title}}">
+                        <!-- .portfolio-thumb -->
+                        <div class="portfolio-thumb relative">
+                            <img src="{{servicio.image.url}}" class="img-fluid" alt=""
+                                title="Invest Advices" />
+                            <!-- .portfolio-wrap -->
+                            <div class="portfolio-wrap">
+                                <div class="portfolio-details-overlay">
+                                    <a href="{% url 'app_core:services_view' servicio.id %}">
+                                        <h3 class="mb-3">
+                                            {{servicio.title}}
+                                        </h3>
                                     </a>
+                                    <div class="portfolio-icons">
+                                        <a href="{% url 'app_core:services_view' servicio.id %}" class="link-icon">
+                                            <i class="icon-link colorWhite"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
+                            <!-- .portfolio-wrap -->
                         </div>
-                        <!-- .portfolio-wrap -->
-                    </div>
-                </div>
-                <!-- .portfolio-item end-->
-                <!-- .portfolio-item -->
-                <div class="portfolio-item portfolio-overlay-wrap col-lg-4 col-md-6 col-sm-12 col-xs-12 filter siding">
-                    <!-- .portfolio-thumb -->
-                    <div class="portfolio-thumb relative">
-                        <img src="{% static 'app_core/images/portfolio/portfolio-grid/grid2/SidingService.webp' %}" class="img-fluid" alt=""
-                            title="Simple Solutions" />
-                        <!-- .portfolio-wrap -->
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-details-overlay">
-                                <h3 class="mb-3"><a href="single-project.html" target="_blank">Siding</a></h3>
-                                <div class="portfolio-icons">
-                                    <a href="single-project.html" class="link-icon" target="_blank">
-                                        <i class="icon-link colorWhite"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .portfolio-wrap -->
-                    </div>
-                </div>
-                <!-- .portfolio-item end-->
-                <!-- .portfolio-item -->
-                <div class="portfolio-item portfolio-overlay-wrap col-lg-4 col-md-6 col-sm-12 col-xs-12 filter gutter">
-                    <!-- .portfolio-thumb -->
-                    <div class="portfolio-thumb relative">
-                        <img src="{% static 'app_core/images/portfolio/portfolio-grid/grid2/GuttersService.webp' %}" class="img-fluid" alt=""
-                            title="Finance Consulting" />
-                        <!-- .portfolio-wrap -->
-                        <div class="portfolio-wrap">
-                            <div class="portfolio-details-overlay">
-                                <h3 class="mb-3"><a href="single-project.html" target="_blank">Gutters</a></h3>
-                                <div class="portfolio-icons">
-                                    <a href="single-project.html" class="link-icon" target="_blank">
-                                        <i class="icon-link colorWhite"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- .portfolio-wrap -->
-                    </div>
-                </div>
-                <!-- .portfolio-item end-->
+                    </div>    
+                {% endfor %}
 
                 <!-- .portfolio-item -->
                 <div class="portfolio-item portfolio-overlay-wrap col-lg-4 col-md-6 col-sm-12 col-xs-12 filter gutter"></div>

@@ -10,23 +10,7 @@
                 <div class="row">
                     <!-- Col -->
                     <div class="col-lg-4 mb-lg-0 mb-4">
-                        <div class="div-bg-img b-radius-20" data-bg="{% static 'app_core/images/bg/bg-2.jpg' %}">
-                            <div class="f-box c-page text-center typo-white">
-                                <div class="feature-icon margin-bottom-10">
-                                    <i class="ti-location-pin"></i>
-                                </div>
-                                <div class="feature-content">
-                                    <div class="feature-title">
-                                        <h5 class="mb-2">Our Location</h5>
-                                    </div>
-                                    <p class="mb-0">684 West College St. Sun City, United States America.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Col -->
-                    <div class="col-lg-4 mb-lg-0 mb-4">
-                        <div class="div-bg-img b-radius-20" data-bg="{% static 'app_core/images/bg/bg-3.jpg' %}">
+                        <div class="div-bg-img b-radius-20" data-bg="{% static 'app_core/images/bg/bg-3.webp' %}">
                             <div class="f-box c-page text-center typo-white">
                                 <div class="feature-icon margin-bottom-10">
                                     <i class="ti-headphone-alt"></i>
@@ -35,16 +19,32 @@
                                     <div class="feature-title">
                                         <h5 class="mb-2">Phone Number</h5>
                                     </div>
-                                    <a href="tel:+(556)545-5418">+(556) 545-5418</a>
-                                    <br>
-                                    <a href="tel:+(556)654-5451">+(556) 654-5451</a>
+                                    <a href="" id="contactPhone"></a>
+                                    <!-- <br>
+                                    <a href="tel:+(556)654-5451">+(556) 654-5451</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Col -->
+                    <div class="col-lg-4 mb-lg-0 mb-4">
+                        <div class="div-bg-img b-radius-20" data-bg="{% static 'app_core/images/bg/bg-2.webp' %}">
+                            <div class="f-box c-page text-center typo-white">
+                                <div class="feature-icon margin-bottom-10">
+                                    <i class="ti-location-pin"></i>
+                                </div>
+                                <div class="feature-content">
+                                    <div class="feature-title">
+                                        <h5 class="mb-2">Our Location</h5>
+                                    </div>
+                                    <p class="mb-0">{{contact.location}}, <br>{{contact.city}}.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!-- Col -->
                     <div class="col-lg-4">
-                        <div class="div-bg-img b-radius-20" data-bg="{% static 'app_core/images/bg/bg-4.jpg' %}">
+                        <div class="div-bg-img b-radius-20" data-bg="{% static 'app_core/images/bg/bg-4.webp' %}">
                             <div class="f-box c-page text-center typo-white">
                                 <div class="feature-icon margin-bottom-10">
                                     <i class="ti-email"></i>
@@ -53,9 +53,9 @@
                                     <div class="feature-title">
                                         <h5 class="mb-2">Email Address</h5>
                                     </div>
-                                    <a href="mailto:info@example.com">info@example.com</a>
-                                    <br>
-                                    <a href="mailto:info@metal.com">info@metal.com</a>
+                                    <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+                                    <!-- <br>
+                                    <a href="mailto:info@metal.com">info@metal.com</a> -->
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
         </section>
         <!-- Contact Section End -->
         <!-- Contact Section -->
-        <section class="contact-form-section form-with-img">
+        <section class="contact-form-section form-with-img" id="contact_section_form">
             <div class="container">
                 <div class="row">
                     <!-- col -->

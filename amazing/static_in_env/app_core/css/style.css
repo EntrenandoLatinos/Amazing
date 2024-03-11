@@ -8956,8 +8956,8 @@ body.rtl.push-active .page-wrapper.right-push .sticky-nav-inner, body.rtl.overla
 	}
 	section,
 	.pad-tb-md-100 {
-		padding-top: 70px !important;
-		padding-bottom: 70px !important;
+		padding-top: 70px;
+		padding-bottom: 70px;
 	}
 	.pad-bottom-lg-100 {
 		padding-bottom: 70px !important;
@@ -10354,7 +10354,7 @@ rs-slide .wpcf7 input[type=submit] {
     filter: brightness(0) invert(0);
 }
 .accordion-button:not(.collapsed) {
-    color: #000;
+    color: #fff;
 }
 .accordion.model-1 .accordion-item {
     border: unset;
