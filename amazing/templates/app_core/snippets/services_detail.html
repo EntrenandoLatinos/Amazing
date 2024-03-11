@@ -26,8 +26,11 @@
                             <!-- about button -->
                             <div class="text-center">
                                 <div class="about-img">
-                                    <img src="{% static 'app_core/images/about-us/tab-screen.png' %}" class=""
-                                        alt="about-img">
+                                    {% if servicio.image_large %}
+                                        <img src="{{servicio.image_large.url}}" class="" alt="about-img">
+                                    {% else %}
+                                        <img src="{% static 'app_core/images/about-us/tab-screen.png' %}" class="" alt="about-img">
+                                    {% endif %}
                                 </div>
                                 <!-- .col -->
                             </div>

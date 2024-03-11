@@ -82,7 +82,7 @@ class CounterForm(forms.ModelForm):
 class ServiceForm(forms.ModelForm):
     class Meta:
         model = Service
-        fields = ['image', 'title', 'description', 'description_finish']
+        fields = ['image', 'image_large', 'title', 'description', 'description_finish']
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
         }
