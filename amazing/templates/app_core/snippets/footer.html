@@ -39,11 +39,18 @@
                         </div>
                         <!-- Text -->
                         <div class="menu-quick-links">
-                            <ul class="menu">
+                            <li class="menu-item"><a href="{% url 'app_core:index' %}">Home</a></li>    
+                            <li class="menu-item"><a href="{% url 'app_core:about' %}">About Us</a></li>    
+                            <li class="menu-item"><a href="{% url 'app_core:index' %}#services_section">Services</a></li>    
+                            <li class="menu-item"><a href="{% url 'app_core:works' %}">Works</a></li>    
+                            <li class="menu-item"><a href="{% url 'app_core:faq' %}">FAQ's</a></li>    
+                            <li class="menu-item"><a href="{% url 'app_core:contact' %}">Contact</a></li>    
+                            <li class="menu-item"><a href="{% url 'app_core:privacy' %}">Privacy</a></li>    
+                            <!-- <ul class="menu">
                                 {% for servicio in servicios %}
                                     <li class="menu-item"><a href="{% url 'app_core:services_view' servicio.id %}">{{servicio.title}}</a></li>    
                                 {% endfor %}
-                            </ul>
+                            </ul> -->
                         </div>                           
                     </div>
                     <!-- Col -->
