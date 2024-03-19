@@ -108,7 +108,7 @@
                                         <li class="menu-item"><a href="{% url 'app_core:index' %}">Home</a></li>
                                         <li class="menu-item"><a href="{% url 'app_core:about' %}">About Us</a></li>
                                         <li class="dropdown cus-img-menu dropdown-sub"><a href="index.html">Services</a>
-                                            <ul class="dropdown-menu mega-dropdown-menu basic-container dropdown-col-3 clearfix">
+                                            <ul class="dropdown-menu mega-dropdown-menu basic-container dropdown-col-4 clearfix">
                                                 
                                                 {% for servicio in servicios %}
                                                     <li class="mega-dropdown-col">                                                                
@@ -116,12 +116,12 @@
                                                             <!--News Post-->
                                                             <div class="img-block">
                                                                 <a href="{% url 'app_core:services_view' servicio.id %}">
-                                                                    <img src="{{servicio.image.url}}" width='400' height='500' alt="screenshot-img">
+                                                                    <img src="{{servicio.image_small.url}}" width='400' height='500' alt="screenshot-img">
                                                                 </a>
                                                             </div>
                                                             <div class="title-wrap">
                                                                 <p><a href="{% url 'app_core:services_view' servicio.id %}" class="mega-menu-title">{{servicio.title}}</a></p>
-                                                            </div>                                                                       
+                                                            </div>
                                                         </div>
                                                     </li>
                                                 {% endfor %}

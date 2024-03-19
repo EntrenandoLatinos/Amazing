@@ -128,6 +128,7 @@ class Counter(AuditoriaFecha):
 class Service(AuditoriaFecha):
     image = models.ImageField(upload_to='service/', null=True, blank=True)
     image_large = models.ImageField(upload_to='service/', null=True, blank=True)
+    image_small = models.ImageField(upload_to='service/', null=True, blank=True)
     title = models.CharField("Service Name", max_length=60, null=True, blank=True)
     description = RichTextField("Description", null=True, blank=True)
     description_finish = RichTextField("Description finish", null=True, blank=True)
