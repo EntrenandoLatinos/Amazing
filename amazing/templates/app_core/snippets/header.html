@@ -1,0 +1,177 @@
+{% load static %}
+
+<header>
+    <!--Mobile Header-->
+    <div class="mobile-header bg-white typo-dark">
+        <div class="mobile-header-inner">
+            <div class="sticky-outer">
+                <div class="sticky-head">
+                    <div class="basic-container clearfix">
+                        <ul class="nav mobile-header-items pull-left">
+                            <li class="nav-item"><a href="#" class="zmm-toggle img-before"><i class="ti-menu"></i></a></li>
+                        </ul>
+                        <ul class="nav mobile-header-items pull-center">
+                            <li>
+                                <a href="{% url 'app_core:index' %}" class="img-before"><img src="{% static 'app_core/images/logo2.png' %}" class="img-fluid" width="103" height="45" alt="Logo"></a>
+                            </li>
+                        </ul>
+                        <ul class="nav mobile-header-items pull-right">
+                            <li class="nav-item"><a href="#" class="img-before overlay-search-switch"><i class="fa fa-share-alt" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <!-- .basic-container -->
+                </div>
+                <!-- .sticky-head -->
+            </div>
+            <!-- .sticky-outer -->
+        </div>
+        <!-- .mobile-header-inner -->
+    </div>
+    <!-- .mobile-header -->
+    <!--Header-->
+    <div class="header-inner header-4">                    
+        <!--Logobar-->
+        <div class="topbar">
+            <div class="basic-container clearfix">
+                <div class="logobar-inner">
+                    <!--Logobar Left Item-->
+                    <ul class="nav logobar-items pull-left">
+                        <li>
+                            <a href="{% url 'app_core:index' %}" class="logo-general"><img src="{% static 'app_core/images/logo7.png' %}" class="img-fluid" width="103" height="45" alt="Logo" /></a>
+                        </li>
+                    </ul>
+                    <!--Logobar Right Item-->
+                    <ul class="nav logobar-items pull-right">
+                        <!--Nav Item-->
+                        <li class="nav-item me-4">
+                            <!--Media-->
+                            <div class="media header-info d-inline-block lh-1 align-middle">
+                                <span class="header-icon colorWhite">
+                                    <i class="ti-map-alt align-middle me-2"></i>
+                                </span>
+                                <div class="media-body d-inline-block align-middle">
+                                    <h6 class="mb-0 colorWhite">{{contact.location}},</h6> 
+                                    <p class="mb-0 mt-1 colorGray">{{contact.city}}.</p>
+                                </div>
+                            </div>
+                            <!-- Media End -->
+                        </li>
+                        <!--Nav Item-->
+                        <!--Nav Item-->
+                        <li class="nav-item me-4">
+                            <!--Media-->
+                            <div class="media header-info d-inline-block lh-1 align-middle">
+                                <span class="header-icon colorWhite">
+                                    <i class="ti-time align-middle me-2"></i>
+                                </span>
+                                <div class="media-body d-inline-block align-middle">
+                                    <h6 class="mb-0 colorWhite">Mon-Sat: 7am to 7pm</h6> 
+                                    <p class="mb-0 mt-1 colorGray">Sunday: Closed</p>
+                                </div>
+                            </div>
+                            <!-- Media End -->
+                        </li>
+                        <!--Nav Item-->
+                        <!--Nav Item-->
+                        <li class="nav-item">
+                            <!--Media-->
+                            <div class="media header-info d-inline-block lh-1 align-middle">
+                                <span class="header-icon colorWhite">
+                                    <i class="ti-headphone-alt align-middle me-2"></i>
+                                </span>
+                                <div class="media-body d-inline-block align-middle">
+                                    <h6 class="mb-0">
+                                        <a href="" class="mb-0 mt-1" style="color: white;" id="contactPhone"></a>
+                                    </h6> 
+                                    <a href="mailto:info@example.com" class="mb-0 mt-1" style="color: #ebebeb;">{{contact.email}}</a>
+                                </div>
+                            </div>
+                            <!-- Media End -->
+                        </li>
+                        <!--Nav Item-->									
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--Sticky part-->
+        <div class="sticky-outer">
+            <div class="sticky-head">
+                <!--Navbar-->
+                <nav class="navbar nav-shadow">
+                    <div class="basic-container clearfix">
+                        <div class="navbar-inner">                                        
+                            <!-- Menu -->
+                            <ul class="nav navbar-items pull-center">
+                                <!--List Item-->
+                                <li class="list-item">
+                                    <ul class="nav navbar-main theme-main-menu">
+                                        <li class="menu-item"><a href="{% url 'app_core:index' %}">Home</a></li>
+                                        <li class="menu-item"><a href="{% url 'app_core:about' %}">About Us</a></li>
+                                        <li class="dropdown cus-img-menu dropdown-sub"><a href="index.html">Services</a>
+                                            <ul class="dropdown-menu mega-dropdown-menu basic-container dropdown-col-4 clearfix">
+                                                
+                                                {% for servicio in servicios %}
+                                                    <li class="mega-dropdown-col">                                                                
+                                                        <div class="img-menu">
+                                                            <!--News Post-->
+                                                            <div class="img-block">
+                                                                <a href="{% url 'app_core:services_view' servicio.id %}">
+                                                                    <img src="{{servicio.image_small.url}}" width='400' height='500' alt="screenshot-img">
+                                                                </a>
+                                                            </div>
+                                                            <div class="title-wrap">
+                                                                <p><a href="{% url 'app_core:services_view' servicio.id %}" class="mega-menu-title">{{servicio.title}}</a></p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                {% endfor %}
+                                                
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item"><a href="{% url 'app_core:works' %}">Works</a></li>
+                                        <li class="dropdown relative menu-item-logo d-none d-lg-block">
+                                            <div class="main-logo">
+                                            <a href="{% url 'app_core:index' %}" class="logo-general"><img src="{% static 'app_core/images/logo2.png' %}" class="img-fluid" width="115" height="50" alt="Logo" /></a>
+                                            <a href="{% url 'app_core:index' %}" class="logo-sticky"><img src="{% static 'app_core/images/logo2.png' %}" class="img-fluid changeable-dark" width="103" height="45" alt="Logo" /></a>
+                                            </div>
+                                        </li>
+                                        <li class="menu-item"><a href="{% url 'app_core:faq' %}">FAQ's</a></li>
+                                        <li class="menu-item"><a href="{% url 'app_core:contact' %}">Contact</a></li>
+                                        <li class="menu-item"><a href="{% url 'app_core:privacy' %}">Privacy</a></li>
+                                        <!--Nav Item-->
+                                        <li class="list-item">
+                                            <a href="#" class="full-view-switch text-center">
+                                                <!-- <i class="ti-search"></i> -->
+                                                <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <!--Search-->
+                                            <div class="full-view-wrapper hide">
+                                                <a href="#" class="close full-view-close"></a>
+                                                <div class="social-icons mt-2">
+                                                    <a href="javascript:;" class="social-fb"><span class="ti-facebook socialCustom"></span><div class="hover-circle"></div></a>
+                                                    <a href="javascript:;" class="social-twitter"><span class="ti-twitter socialCustom"></span><div class="hover-circle"></div></a>
+                                                    <a href="javascript:;" class="social-instagram"><span class="ti-instagram socialCustom"></span><div class="hover-circle"></div></a>
+                                                    <a href="javascript:;" class="social-pinterest"><span class="ti-pinterest socialCustom"></span><div class="hover-circle"></div></a>
+                                                    <a href="javascript:;" class="social-fb"><i class="fab fa-tiktok socialCustom"></i><div class="hover-circle"></div></a>
+                                                </div> 
+                                            </div>
+                                        </li>
+                                        <li class="menu-item"><a href="{% url 'account_login' %}"><i class="fa fa-sign-in-alt" style="font-size: 18px;"></i></a></li>
+                                    </ul>
+                                </li>
+                                <!--List Item End-->
+                            </ul>
+                            <!-- Menu -->                                                                                
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+            <!--sticky-head-->
+        </div>
+        <!--sticky-outer-->
+    </div>
+</header>
+<!-- header -->		

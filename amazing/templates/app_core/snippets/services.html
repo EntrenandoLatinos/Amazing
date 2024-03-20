@@ -1,0 +1,61 @@
+{% load static %}
+
+<!-- Portfolio Section -->
+<section id="services_section" class="portfolio-section pad-bottom-30 pad-bottom-md-none">
+    <div class="row">
+        <!-- Col -->
+        <div class="offset-md-2 col-md-8">
+            <div class="title-wrap text-center">
+                <div class="section-title">
+                    <h2 class="title mb-0">Our <span class="theme-color">Services</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Col -->
+        <div class="col-md-12">
+            <div class="row portfolio-wrap portfolio-classic px-4">
+                <div class="filter-style-2" align="center">
+                    <div class="filter-wrap">
+                        <button class="btn btn-default filter-button active" data-filter="all">All</button>
+                        {% for servicio in servicios %}
+                            <button class="btn btn-default filter-button" data-filter="{{servicio.title}}">{{servicio.title}}</button>    
+                        {% endfor %}
+                    </div>
+                </div>
+                <br>
+                {% for servicio in servicios %}
+                    <div class="portfolio-item portfolio-overlay-wrap col-lg-4 col-md-6 col-sm-12 col-xs-12 filter {{servicio.title}}">
+                        <!-- .portfolio-thumb -->
+                        <div class="portfolio-thumb relative">
+                            <img src="{{servicio.image.url}}" class="img-fluid" alt=""
+                                title="Invest Advices" />
+                            <!-- .portfolio-wrap -->
+                            <div class="portfolio-wrap">
+                                <div class="portfolio-details-overlay">
+                                    <a href="{% url 'app_core:services_view' servicio.id %}">
+                                        <h3 class="mb-3">
+                                            {{servicio.title}}
+                                        </h3>
+                                    </a>
+                                    <div class="portfolio-icons">
+                                        <a href="{% url 'app_core:services_view' servicio.id %}" class="link-icon">
+                                            <i class="icon-link colorWhite"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- .portfolio-wrap -->
+                        </div>
+                    </div>    
+                {% endfor %}
+
+                <!-- .portfolio-item -->
+                <div class="portfolio-item portfolio-overlay-wrap col-lg-4 col-md-6 col-sm-12 col-xs-12 filter gutter"></div>
+                <!-- .portfolio-item end-->
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio Section End -->

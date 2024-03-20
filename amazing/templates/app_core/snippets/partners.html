@@ -1,0 +1,28 @@
+{% load static %}
+
+<!-- Client Section -->
+<section class="client-section bgColorWhite full-dark p-md-5 p-4">
+    <div class="container">
+        <!-- Client Wrap -->
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="owl-carousel-wrap">
+                    <!--Client Main Slider-->
+                    <div class="owl-carousel image-carousel-wrap" data-loop="1" data-nav="0" data-dots="0" data-autoplay="1" data-autoplaypause="1" data-autoplaytime="5000" data-smartspeed="250" data-margin="30" data-items="5" data-items-tab="3" data-items-mob="2">
+                        {% for partner in partners %}
+                            <!--Item-->
+                            <div class="item">
+                                <!--Image Inner-->
+                                <img src="{{partner.image.url}}" class="img-fluid mb-0" width="226" height="113" alt="client-img" />
+                                <!--Image Inner Ends-->
+                            </div>
+                            <!--Item End-->
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Client Wrap -->
+    </div>
+</section>
+<!-- Client Section End -->		

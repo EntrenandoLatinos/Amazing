@@ -1,0 +1,50 @@
+{% load static %}
+
+{% for servicio in servicios %}
+<!-- Title Section -->
+<section id="title-section" class="tilte-section pad-top-95 full-dark" style="padding-bottom: 0;">
+    <div class="container">
+        <!-- Row -->
+        <div class="row">
+            <div class="offset-md-2 col-md-8">
+                <div class="title-wrap text-center mb-4">
+                    <div class="section-title">								            
+                        <h2 class="section-title margin-top-5 mb-0">
+                            <a href="{% url 'app_core:services_view' servicio.id %}">{{servicio.title}} 
+                                <span class="theme-color">Services</span>
+                            </a>
+                        </h2>
+                    </div>
+                    <p>{{servicio.description|safe}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- about wrap -->
+                <div class="about-wrap relative">
+                    <div class="about-wrap-inner">
+                        <!-- about details -->
+                        <div class="about-wrap-details">
+                            <!-- about button -->
+                            <div class="text-center">
+                                <div class="about-img">
+                                    <a href="{% url 'app_core:services_view' servicio.id %}">
+                                        <img src="{{servicio.image.url}}" class="" alt="{{servicio.title}}">
+                                    </a>
+                                </div>
+                                <!-- .col -->
+                            </div>
+                        </div>
+                        <!-- about details End-->
+                    </div>
+                </div>
+                <!-- about wrap end -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Title Section End -->
+{% endfor %}
+
+<section id="title-section" class="tilte-section pad-top-95 full-dark" style="padding-bottom: 0;"></section>

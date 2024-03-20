@@ -1,0 +1,274 @@
+{% load static %}
+
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="{% static 'app_core/images/favicon1.webp' %}" rel="icon">
+    <!--Title-->
+    <title>{% block head_title %}Amazing | {% endblock head_title %}</title>
+
+    <meta name="description" content="">
+    <meta name="subject" content="">
+    <meta name="author" content="">
+    <!-- CSS -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'app_core/css/bootstrap.min.css' %}">
+    <!-- #Font Awesome ========================= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" />
+	<!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="{% static 'app_core/css/bootstrap-icons.css' %}">
+    <!-- Simple Line Icons -->
+    <link rel="stylesheet" href="{% static 'app_core/css/simple-line-icons.min.css' %}">
+    <!-- Themify Icons -->
+    <link rel="stylesheet" href="{% static 'app_core/css/themify-icons.css' %}">
+	<!-- Revolution Slider -->
+	<link rel="stylesheet" type="text/css" href="{% static 'app_core/rs-plugin/fonts/pe-icon-7-stroke/css/pe-icon-7-stroke.css' %}">
+	<!-- REVOLUTION STYLE SHEETS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'app_core/rs-plugin/css/settings.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'app_core/rs-plugin/css/rs6.css' %}">
+    <!-- Owl Slider -->
+    <link rel="stylesheet" href="{% static 'app_core/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'app_core/css/owl.theme.default.min.css' %}">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="{% static 'app_core/css/magnific-popup.css' %}">
+    <!-- Color Panel -->
+    <link href="{% static 'app_core/css/color_panel.css' %}" rel="stylesheet" type="text/css" /> 
+    <link rel="stylesheet" href="{% static 'app_core/css/color-schemes/blue.css' %}" id="changeable-colors"> 
+	<!-- Main Style -->
+    <link rel="stylesheet" href="{% static 'app_core/css/style.css' %}" class="main-style">
+    <!-- #Whatsapp Button CSS ========================= -->
+    <link href="{% static 'app_core/css_whatsapp/whatsapp.css' %}" rel="stylesheet">
+    <link href="{% static 'app_core/css_whatsapp/line-awesome.css' %}" rel="stylesheet">
+    <!-- Icononos de redes sociales custom -->
+    <style>
+        .socialCustom{
+            font-size: 30px;
+        }
+        .insuranceCustom {
+            padding-top: 0px !important;
+            padding-bottom: 0px !important;
+        }
+        .social-icons a {
+            position: relative; /* Para que el círculo esté posicionado correctamente */
+            display: inline-block; /* Para que el círculo abarque solo el tamaño del icono */
+        }
+        .hover-circle {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            width: 50px; /* Ajusta el tamaño del círculo según sea necesario */
+            height: 50px; /* Ajusta el tamaño del círculo según sea necesario */
+            border-radius: 50%;
+            background-color: transparent;
+            opacity: 0;
+            transition: background-color 0.3s, opacity 0.3s;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+        .social-icons a:hover .hover-circle {
+            background-color: white;
+            opacity: 0.5;
+        }
+    </style>
+    <style>.zozo-revslider-section{margin-top:-30px}#rev_slider_8_1_wrapper .hephaistos.tparrows{cursor:pointer;background:rgba(0,0,0,0.5);width:40px;height:40px;position:absolute;display:block;z-index:1000; border-radius:50%}#rev_slider_8_1_wrapper .hephaistos.tparrows.rs-touchhover{background:#000000}#rev_slider_8_1_wrapper .hephaistos.tparrows:before{font-family:'revicons';font-size:18px;color:#ffffff;display:block;line-height:40px;text-align:center}#rev_slider_8_1_wrapper .hephaistos.tparrows.tp-leftarrow:before{content:'\e82c'; margin-left:-2px}#rev_slider_8_1_wrapper .hephaistos.tparrows.tp-rightarrow:before{content:'\e82d'; margin-right:-2px}</style>	
+    {% block extra_styles %}{% endblock extra_styles %}
+</head>
+<!--Body Start-->
+<body data-res-from="1025">
+    <div id="top_page"></div>
+	<!--Page Pre Loader-->
+	<div class="page-loader"></div>
+    
+    <!--Zmm Wrapper-->
+    <!-- Esto es para q el menu en moviles se despliegue -->
+    <div class="zmm-wrapper">
+        <a href="#" class="zmm-close close"></a>
+        <div class="zmm-inner bg-white typo-dark">
+            <div class="text-center mobile-logo-part margin-bottom-30">
+                 <a href="{% url 'app_core:index' %}" class="img-before"><img src="{% static 'app_core/images/logo5.png' %}" class="img-fluid changeable-dark" width="115" height="50" alt="Logo"></a>
+            </div>
+            <div class="zmm-main-nav">
+            </div>            
+			<div class="text-center margin-top-30">
+			    <div class="contact-info">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons mb-3 mt-4">
+                        <a href="javascript:;" class="social-fb"><span class="ti-facebook socialCustom"></span><div class="hover-circle"></div></a>
+                        <a href="javascript:;" class="social-twitter"><span class="ti-twitter socialCustom"></span><div class="hover-circle"></div></a>
+                        <a href="javascript:;" class="social-instagram"><span class="ti-instagram socialCustom"></span><div class="hover-circle"></div></a>
+                        <a href="javascript:;" class="social-pinterest"><span class="ti-pinterest socialCustom"></span><div class="hover-circle"></div></a>
+                        <a href="javascript:;" class="social-fb"><i class="fab fa-tiktok socialCustom"></i><div class="hover-circle"></div></a>
+                    </div> 
+                </div>
+			</div>
+        </div>
+    </div>
+    
+    <!-- Overlay Search -->
+    <!-- Esto es para q el search en moviles se despliegue -->
+    <div class="overlay-search text-center hide">
+		<a href="#" class="close close-light overlay-search-close"></a>
+		<div class="search-form-wrapper">
+			<div class="social-icons mb-3">
+                <a href="#" class="social-fb"><span class="ti-facebook colorWhite socialCustom"></span></a>
+                <a href="#" class="social-twitter"><span class="ti-twitter colorWhite socialCustom"></span></a>
+                <a href="#" class="social-instagram"><span class="ti-instagram colorWhite socialCustom"></span></a>
+                <a href="#" class="social-fb"><i class="fab fa-tiktok colorWhite socialCustom"></i></a>
+            </div>
+		</div>
+	</div>
+
+    <!--Watsapp Button-->
+    <a id="link_whatsapp_web" class="whatsappchat-anchor extremestyle whatsappchat-anchor1" target="_blank" href="https://web.whatsapp.com/send?l=es&phone=1{{contact.phone1}}&text=https://dvineroofingllc.com/ " rel="noopener noreferrer" style="display: none;"> 
+        <div class="whatsapp whatsapp_1 whatsapp-badge bottom-right">
+            <span style="background-color: #25d366">
+                <i class="whatsapp-icon"></i> Whatsapp 
+            </span>
+        </div>
+    </a>
+    <a id="link_whatsapp_movil" class="whatsappchat-anchor extremestyle whatsappchat-anchor1" target="_blank" href="https://api.whatsapp.com/send?l=es&phone=1{{contact.phone1}}&text=https://dvineroofingllc.com/ " rel="noopener noreferrer" style="display: none;"> 
+        <div class="whatsapp whatsapp_1 whatsapp-badge bottom-right">
+            <span style="background-color: #25d366">
+                <i class="whatsapp-icon"></i> Whatsapp 
+            </span>
+        </div>
+    </a>
+    
+    <!-- Main wrapper-->
+    <div class="page-wrapper">
+        <div class="page-wrapper-inner">
+            
+            <!-- start Header -->
+            {% include 'app_core/snippets/header.html' %}
+            <!-- end Header -->
+
+            <!-- Page Content -->
+            <div class="content-wrapper pad-none">
+                <div class="content-inner">					
+
+                    {% block content %}{% endblock content %}
+							
+                </div>
+            </div>
+        </div>
+        <!-- .page-wrapper-inner -->
+    </div>
+    <!--page-wrapper-->
+
+    <!-- start Footer -->
+	{% include 'app_core/snippets/footer.html' %}
+	<!-- end Footer -->
+
+    <!-- jQuery Lib -->
+    <script src="{% static 'app_core/js/jquery.min.js' %}"></script>
+    <!-- Bootstrap Js -->
+    <script src="{% static 'app_core/js/bootstrap.bundle.min.js' %}"></script>
+	<!-- Popper Js Support for Bootstrap -->
+    <script src="{% static 'app_core/js/popper.min.js' %}"></script>
+    <!-- Easing Js -->
+    <script src="{% static 'app_core/js/jquery.easing.min.js' %}"></script>
+    <!-- Carousel Js Code -->
+    <script src="{% static 'app_core/js/owl.carousel.min.js' %}"></script> 
+    <!-- Paroller Js -->
+    <script src="{% static 'app_core/js/jquery.paroller.min.js' %}"></script>
+    <!-- Isotope Js -->
+    <script src="{% static 'app_core/js/isotope.pkgd.min.js' %}"></script>
+    <!-- Magnific Popup Js -->
+    <script src="{% static 'app_core/js/jquery.magnific-popup.min.js' %}"></script>
+	<!-- Day Counter Js -->
+    <script src="{% static 'app_core/js/jquery.countdown.min.js' %}"></script>
+	<!-- Circle Progress Js -->
+    <script src="{% static 'app_core/js/jquery.circle.progress.min.js' %}"></script>
+	<!-- Circle Progress Js -->
+    <script src="{% static 'app_core/js/Chart.bundle.min.js' %}"></script>
+	<!-- Validator Js -->
+    <script src="{% static 'app_core/js/validator.min.js' %}"></script>
+    <!-- Smart Resize Js -->
+    <script src="{% static 'app_core/js/smartresize.min.js' %}"></script>
+    <!-- Appear Js -->
+    <script src="{% static 'app_core/js/jquery.appear.min.js' %}"></script>
+    <!-- Theme Custom Js -->
+    <script src="{% static 'app_core/js/custom.js' %}"></script>	
+	<!-- Color -->
+	<script src="{% static 'app_core/js/color-panel.js' %}"></script>
+	<!-- REVOLUTION JS FILES -->
+	<script src="{% static 'app_core/rs-plugin/js/jquery.themepunch.tools.min.js' %}"></script>
+	<script src="{% static 'app_core/rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
+	<!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+	<script src="{% static 'app_core/rs-plugin/js/home-6/rbtools.min.js' %}"></script>
+	<script src="{% static 'app_core/rs-plugin/js/home-6/rs6.min.js' %}"></script>
+	<script src="{% static 'app_core/rs-plugin/js/home-6/home-6.js' %}"></script>
+    <!-- Whatsaap Button -->
+    <script>
+        var is_phone;
+        var link_body_web = document.getElementById("link_whatsapp_web");
+        var link_banner_web = document.getElementById("whatsapp_banner_web");
+        var link_body_movil = document.getElementById("link_whatsapp_movil");
+        var link_banner_movil = document.getElementById("whatsapp_banner_movil");
+
+        if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|ipad|iris|kindle|Android|Silk|lge |maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i.test(navigator.userAgent) 
+            || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(navigator.userAgent.substr(0,4))) { 
+            link_body_web.style.display = 'none';
+            if (link_banner_web) {
+                link_banner_web.style.display = 'none';
+            }
+            is_phone = true;
+        }else{
+            link_body_movil.style.display = 'none';
+            if (link_banner_movil) {
+                link_banner_movil.style.display = 'none';
+            }
+            is_phone = false;
+        }
+        // Función para mostrar u ocultar el botón flotante dependiendo de la posición del usuario en la página
+        window.addEventListener('scroll', function() {
+        let amountScrolled = 700;
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > amountScrolled && is_phone) {
+            link_body_movil.style.display = 'block';
+        } else {
+            link_body_movil.style.display = 'none';
+        }
+
+        if (scrollTop > amountScrolled && !is_phone) {
+            link_body_web.style.display = 'block';
+        } else {
+            link_body_web.style.display = 'none';
+        }
+        });
+
+        function formatPhoneNumber(phoneNumberInput) {
+            // Elimina todos los caracteres no numéricos del número de teléfono
+            var cleanedPhoneNumber = phoneNumberInput.replace(/\D/g, '');
+
+            // Formatea el número de teléfono en el formato deseado
+            var formattedPhoneNumber = '(' + cleanedPhoneNumber.substring(0, 3) + ') ' +
+                                        cleanedPhoneNumber.substring(3, 6) + '-' +
+                                        cleanedPhoneNumber.substring(6);
+
+            return formattedPhoneNumber;
+        }
+
+        var phoneNumber = "{{contact.phone1}}";
+        var telCliente = formatPhoneNumber(phoneNumber);
+
+        // Seleccionar todas las etiquetas <a> con el id "contactPhone"
+        var contactPhones = document.querySelectorAll("#contactPhone");
+        // Iterar sobre todas las etiquetas seleccionadas
+        contactPhones.forEach(function(contactPhone) {
+            // Establece el número como el texto del enlace
+            contactPhone.textContent = telCliente;
+            // Establece el número como el atributo href del enlace (para hacerlo un enlace telefónico)
+            contactPhone.href = "tel:" + phoneNumber;
+        });
+    </script>
+    {% block extra_javascript %}{% endblock extra_javascript %}
+</body>
+<!-- Body End -->
+</html>
