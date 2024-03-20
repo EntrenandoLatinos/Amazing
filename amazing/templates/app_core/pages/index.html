@@ -5,6 +5,10 @@
 {% block head_title %}{{ block.super }} Home{% endblock head_title %}
 
 {% block extra_styles %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+/>
 <style>
     .tp-leftarrow,
     .tp-rightarrow {
@@ -79,4 +83,11 @@
 
 {% endblock content %}
 
-{% block extra_javascript %}{% endblock extra_javascript %}
+{% block extra_javascript %}
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // Your custom options for a specific gallery
+    });
+</script>
+{% endblock extra_javascript %}
