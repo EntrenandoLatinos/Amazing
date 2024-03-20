@@ -25,6 +25,14 @@ SOCIAL_MEDIA_CHOICES = [
     ('06', 'LinkedIn'),
 ]
 
+STARS_REVIEW_CHOICES = [
+    ('1', '1'),
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '4'),
+    ('5', '5'),
+]
+
 # Create your models here.
 class AuditoriaFecha(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
@@ -35,6 +43,7 @@ class AuditoriaFecha(models.Model):
 
 class Contact(AuditoriaFecha):
     location = models.CharField("Location", max_length=100, null=True, blank=True)
+    city = models.CharField("City", max_length=100, null=True, blank=True)
     phone1 = models.CharField("Phone 2", max_length=60, null=True, blank=True)
     phone2 = models.CharField("Phone 1", max_length=60, null=True, blank=True)
     email = models.EmailField("Email", null=True, blank=True)
@@ -51,10 +60,12 @@ class Contact(AuditoriaFecha):
 
 class Banner(AuditoriaFecha):
     image = models.ImageField(upload_to='banner/', null=True, blank=True)
-    title = models.CharField("Banner title", max_length=30, null=True, blank=True, default="")
+    title1 = models.CharField("Banner title 1", max_length=30, null=True, blank=True, default="")
+    title2 = models.CharField("Banner title 2", max_length=30, null=True, blank=True, default="")
     subtitle = models.CharField("Banner subtitle", max_length=30, null=True, blank=True, default="")
     description = models.TextField("Description", max_length=73, null=True, blank=True)
-    insurance = models.CharField("Insurance", max_length=100, null=True, blank=True, default="")
+    insurance1 = models.CharField("Insurance 1", max_length=100, null=True, blank=True, default="")
+    insurance2 = models.CharField("Insurance 2", max_length=100, null=True, blank=True, default="")
 
     def __str__(self):
         return "{0}".format(str(self.title))
@@ -65,7 +76,8 @@ class Banner(AuditoriaFecha):
         verbose_name_plural = 'Banners'
     
 class About(AuditoriaFecha):
-    image = models.ImageField(upload_to='about/', null=True, blank=True)
+    image1 = models.ImageField(upload_to='about/', null=True, blank=True)
+    image2 = models.ImageField(upload_to='about/', null=True, blank=True)
     about = RichTextField("About", null=True, blank=True)
     mision = RichTextField("Mission", null=True, blank=True)
     vision = RichTextField("Vision", null=True, blank=True)
@@ -95,12 +107,15 @@ class Skill(AuditoriaFecha):
         verbose_name_plural = 'Skills'
     
 class Counter(AuditoriaFecha):
-    title1 = models.CharField("Title 1", max_length=60, null=True, blank=True)
+    title1 = models.CharField("Title 1", max_length=300, null=True, blank=True)
     number1 = models.IntegerField("Number 1", null=True, blank=True)
-    title2 = models.CharField("Title 2", max_length=60, null=True, blank=True)
+    symbol1 = models.CharField("Symbol 1", max_length=300, null=True, blank=True)
+    title2 = models.CharField("Title 2", max_length=300, null=True, blank=True)
     number2 = models.IntegerField("Number 2", null=True, blank=True)
-    title3 = models.CharField("Title 3", max_length=60, null=True, blank=True)
+    symbol2 = models.CharField("Symbol 2", max_length=300, null=True, blank=True)
+    title3 = models.CharField("Title 3", max_length=300, null=True, blank=True)
     number3 = models.IntegerField("Number 3", null=True, blank=True)
+    symbol3 = models.CharField("Symbol 3", max_length=300, null=True, blank=True)
 
     def __str__(self):
         return "{0}".format(str(self.title1))
@@ -112,9 +127,11 @@ class Counter(AuditoriaFecha):
 
 class Service(AuditoriaFecha):
     image = models.ImageField(upload_to='service/', null=True, blank=True)
+    image_large = models.ImageField(upload_to='service/', null=True, blank=True)
+    image_small = models.ImageField(upload_to='service/', null=True, blank=True)
     title = models.CharField("Service Name", max_length=60, null=True, blank=True)
     description = RichTextField("Description", null=True, blank=True)
-    description_finish = models.TextField("Finish Description", null=True, blank=True)
+    description_finish = RichTextField("Description finish", null=True, blank=True)
 
     def __str__(self):
         return "{0}".format(str(self.title))
@@ -194,6 +211,8 @@ class Testimonial(AuditoriaFecha):
     image = models.ImageField(upload_to='testimonial/', null=True, blank=True)
     name = models.CharField("Name", max_length=60, null=True, blank=True)
     location = models.CharField("Location", max_length=60, null=True, blank=True)
+    stars = models.CharField("Stars", max_length=1, choices=STARS_REVIEW_CHOICES, null=True, blank=True)
+    url = models.URLField("URL", null=True, blank=True)
     description = models.TextField("Description", null=True, blank=True)
 
     def __str__(self):

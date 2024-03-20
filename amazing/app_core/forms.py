@@ -10,12 +10,21 @@ SOCIAL_MEDIA_CHOICES = [
     ('06', 'LinkedIn'),
 ]
 
+STARS_REVIEW_CHOICES = [
+    ('1', '1'),
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '4'),
+    ('5', '5'),
+]
+
 class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
-        fields = ['location', 'phone1', 'phone2', 'email', 'latitude', 'longitude']
+        fields = ['location', 'city', 'phone1', 'phone2', 'email', 'latitude', 'longitude']
         widgets = {
             'location': forms.TextInput(attrs={'class': 'form-control'}),
+            'city': forms.TextInput(attrs={'class': 'form-control'}),
             'phone1': forms.TextInput(attrs={'class': 'form-control'}),
             'phone2': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control', 'type': 'email'}),
@@ -26,18 +35,20 @@ class ContactForm(forms.ModelForm):
 class BannerForm(forms.ModelForm):
     class Meta:
         model = Banner
-        fields = ['image', 'title', 'subtitle', 'description', 'insurance']
+        fields = ['image', 'title1', 'title2', 'subtitle', 'description', 'insurance1', 'insurance2']
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'title1': forms.TextInput(attrs={'class': 'form-control'}),
+            'title2': forms.TextInput(attrs={'class': 'form-control'}),
             'subtitle': forms.TextInput(attrs={'class': 'form-control'}),
             'description': forms.Textarea(attrs={'class': 'resizable_textarea form-control'}),
-            'insurance': forms.TextInput(attrs={'class': 'form-control'}),
+            'insurance1': forms.TextInput(attrs={'class': 'form-control'}),
+            'insurance2': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
 class AboutForm(forms.ModelForm):
     class Meta:
         model = About
-        fields = ['image', 'about', 'mision', 'vision']
+        fields = ['image1', 'image2', 'about', 'mision', 'vision']
 
 class SkillForm(forms.ModelForm):
     class Meta:
@@ -55,23 +66,25 @@ class SkillForm(forms.ModelForm):
 class CounterForm(forms.ModelForm):
     class Meta:
         model = Counter
-        fields = ['title1', 'number1', 'title2', 'number2', 'title3', 'number3']
+        fields = ['title1', 'number1', 'symbol1', 'title2', 'number2', 'symbol2', 'title3', 'number3', 'symbol3']
         widgets = {
             'title1': forms.TextInput(attrs={'class': 'form-control'}),
             'number1': forms.NumberInput(attrs={'class': 'form-control', 'type': 'number'}),
+            'symbol1': forms.TextInput(attrs={'class': 'form-control'}),
             'title2': forms.TextInput(attrs={'class': 'form-control'}),
             'number2': forms.NumberInput(attrs={'class': 'form-control', 'type': 'number'}),
+            'symbol2': forms.TextInput(attrs={'class': 'form-control'}),
             'title3': forms.TextInput(attrs={'class': 'form-control'}),
             'number3': forms.NumberInput(attrs={'class': 'form-control', 'type': 'number'}),
+            'symbol3': forms.TextInput(attrs={'class': 'form-control'}),
         }
 
 class ServiceForm(forms.ModelForm):
     class Meta:
         model = Service
-        fields = ['image', 'title', 'description', 'description_finish']
+        fields = ['image', 'image_large', 'image_small', 'title', 'description', 'description_finish']
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'description_finish': forms.Textarea(attrs={'class': 'resizable_textarea form-control'}),
         }
 
 class ServiceDeleteForm(forms.Form):
@@ -86,12 +99,20 @@ class SubServiceForm(forms.ModelForm):
         }
 
 class TestimonialForm(forms.ModelForm):
+    stars = forms.ChoiceField(
+        choices=STARS_REVIEW_CHOICES, 
+        label='Stars', 
+        required=True,
+        widget=forms.Select(attrs={'class': 'form-control'})
+        )
     class Meta:
         model = Testimonial
-        fields = ['image', 'name', 'location', 'description']
+        fields = ['image', 'name', 'location', 'stars', 'url', 'description']
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'location': forms.TextInput(attrs={'class': 'form-control'}),
+            'location': forms.TextInput(attrs={'class': 'form-control', 'id':'position'}),
+            'stars': forms.Select(attrs={'class': 'form-control'}),
+            'url': forms.TextInput(attrs={'class': 'form-control', 'type': 'url'}),
             'description': forms.Textarea(attrs={'class': 'resizable_textarea form-control'}),
         }
 
@@ -125,11 +146,16 @@ class WorkForm(forms.ModelForm):
         fields = ['image']
 
 class SocialMediaForm(forms.ModelForm):
-    name = forms.ChoiceField(choices=SOCIAL_MEDIA_CHOICES, label='Name', required=True)
+    name = forms.ChoiceField(
+        choices=SOCIAL_MEDIA_CHOICES, 
+        label='Name', 
+        required=True,
+        widget=forms.Select(attrs={'class': 'form-control'})
+        )
     class Meta:
         model = SocialMedia
         fields = ['name', 'url']
         widgets = {
             'name': forms.Select(attrs={'class': 'form-control'}),
-            'url': forms.TextInput(attrs={'class': 'fom-rcontrol', 'type': 'url'}),
+            'url': forms.TextInput(attrs={'class': 'form-control', 'type': 'url'}),
         }

@@ -1,0 +1,37 @@
+{% extends "app_core/base.html" %}
+
+{% load static %}
+
+{% block head_title %}{{ block.super }} Works{% endblock head_title %}
+
+{% block extra_styles %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+/>
+{% endblock extra_styles %}
+
+{% block content %}
+
+<!-- start Banner -->
+    {% include 'app_core/snippets/banner_works.html' %}
+<!-- end Banner -->
+
+<!-- start FAQ -->
+    {% include 'app_core/snippets/works_section.html' %}
+<!-- end FAQ -->
+
+<!-- start Top Page -->
+    {% include 'app_core/snippets/top_page.html' %}
+<!-- end Top Page -->
+
+{% endblock content %}
+
+{% block extra_javascript %}
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // Your custom options for a specific gallery
+    });
+</script>
+{% endblock extra_javascript %}

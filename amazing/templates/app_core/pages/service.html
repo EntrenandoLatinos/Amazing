@@ -1,0 +1,25 @@
+{% extends "app_core/base.html" %}
+
+{% load static %}
+
+{% block head_title %}{{ block.super }} Service{% endblock head_title %}
+
+{% block extra_styles %}{% endblock extra_styles %}
+
+{% block content %}
+
+<!-- start Banner -->
+    {% include 'app_core/snippets/banner_service.html' %}
+<!-- end Banner -->
+
+<!-- start Service Detail -->
+    {% include 'app_core/snippets/services_detail.html' %}
+<!-- end Service Detail -->
+
+<!-- start Top Page -->
+{% include 'app_core/snippets/top_page.html' %}
+<!-- end Top Page -->
+
+{% endblock content %}
+
+{% block extra_javascript %}{% endblock extra_javascript %}

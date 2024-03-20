@@ -14,4 +14,49 @@
 
 {% endblock content %}
 
-{% block extra_javascript %}{% endblock extra_javascript %}
+{% block extra_javascript %}
+<script>
+    function disableButton() {
+        console.log("Se hizo click en este bnoton");
+        document.getElementById("save_testimonials_id").disabled = true;
+    }
+    window.onload = function() {
+        // Obtener los campos de entrada
+        var urlInput = document.querySelector('input[name="url"]');
+        var imageInput = document.querySelector('input[name="image"]');
+        var nameInput = document.querySelector('input[name="name"]');
+        var locationInput = document.querySelector('input[name="location"]');
+        var starsInput = document.querySelector('select[name="stars"]');
+        var descriptionInput = document.querySelector('textarea[name="description"]');
+        
+        // Función para habilitar o deshabilitar campos según el contenido de la URL
+        function toggleFields() {
+            if (urlInput.value !== '') {
+                imageInput.readOnly = true;
+                nameInput.readOnly = true;
+                nameInput.value = 1;
+                locationInput.readOnly = true;
+                starsInput.readOnly = true;
+                descriptionInput.readOnly = true;
+                descriptionInput.value = 1;
+            } else {
+                imageInput.readOnly = false;
+                nameInput.readOnly = false;
+                nameInput.value = '';
+                locationInput.readOnly = false;
+                starsInput.readOnly = false;
+                descriptionInput.readOnly = false;
+                descriptionInput.value = '';  
+            }
+        }
+        
+        // Agregar evento keyup al campo de URL
+        urlInput.addEventListener('keyup', toggleFields);
+        
+        // Llamar a la función para configurar el estado inicial de los campos
+        toggleFields();
+    };
+
+</script>
+
+{% endblock extra_javascript %}
