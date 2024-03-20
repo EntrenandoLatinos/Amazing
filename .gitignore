@@ -2,11 +2,14 @@
 __pycache__/
 *.pyc
 
-#App migrations and media folders
-amazing/app_core/migrations/
-amazing/app_user/migrations/
-amazing/media/
-amazing/static/
+# JetBrains IDE
+.idea/*
+
+# App migrations and media folders
+# amazing/app_core/migrations/
+# amazing/app_user/migrations/
+# amazing/media/
+# amazing/static/
 
 # Archivos de migraciones
 migrations/*
