@@ -1,0 +1,161 @@
+{% load static %}
+
+<section id="title-section" class="tilte-section pad-top-95 full-dark" style="padding-bottom: 0px;">
+    <div class="container">
+        <!-- Row -->
+        <div class="row">
+            <div class="offset-md-2 col-md-8">
+                <div class="title-wrap text-center mb-4">
+                    <div class="section-title">
+                        <h2 class="section-title margin-top-5 mb-0">{{servicio.title}} <span
+                                class="theme-color">Service</span></h2>
+                    </div>
+                    <div>
+                        {{servicio.description|safe}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <!-- about wrap -->
+                <div class="about-wrap relative">
+                    <div class="about-wrap-inner">
+                        <!-- about details -->
+                        <div class="about-wrap-details">
+                            <!-- about button -->
+                            <div class="text-center">
+                                <div class="about-img">
+                                    {% if servicio.image %}
+                                        <img src="{{servicio.image.url}}" class="" alt="about-img">
+                                    {% else %}
+                                        <img src="{% static 'app_core/images/about-us/tab-screen.png' %}" class="" alt="about-img">
+                                    {% endif %}
+                                </div>
+                                <!-- .col -->
+                            </div>
+                        </div>
+                        <!-- about details End-->
+                    </div>
+                </div>
+                <!-- about wrap end -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-2 col-md-8">
+                <div class="title-wrap text-center mb-4">
+                    <div class="section-title mt-5">
+                        {{servicio.description_finish|safe}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% for subservice in subservicios %}
+    {% if forloop.counter|divisibleby:"2" %}
+        <section id="section-about" class="section-about pad-top-none pad-bottom-none pb-lg-0" style="margin: 30px 0;">
+            <div class="container">
+                <!-- Row -->
+                <div class="row d-flex align-items-center">
+                    <!-- Col -->
+                    <div class="col-lg-6">
+                        <!-- about wrap -->
+                        <div class="about-wrap relative">
+                            <div class="about-wrap-inner">
+                                <!-- about details -->
+                                <div class="about-wrap-details">
+                                    <!-- about button -->
+                                    <div class="text-center">
+                                        <div class="about-img mb-4 mb-md-0">
+                                            <img src="{{subservice.image.url}}" width="430"
+                                                height="580" class="" alt="about-img">
+                                        </div>
+                                        <!-- .col -->
+                                    </div>
+                                </div>
+                                <!-- about details End-->
+                            </div>
+                        </div>
+                        <!-- about wrap end -->
+                    </div>
+                    <!-- .col -->
+                    <!-- Col -->
+                    <div class="col-lg-6 ps-lg-0">
+                        <div class="title-wrap margin-bottom-30">
+                            <div class="section-title">
+                                <span class="sub-title theme-color text-uppercase">{{servicio.title}}</span>
+                                <h2 class="section-title margin-top-5 margin-bottom-35 pb-3">{{subservice.title}}
+                                </h2>
+                                <span class="border-bottom"></span>
+                            </div>
+                            <div class="pad-top-15">
+                                <div class="margin-bottom-20">
+                                    {{subservice.description|safe}}
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- Col -->
+                </div>
+                <!-- Row -->
+            </div>
+            <!-- Container -->
+        </section>
+    {% else %}
+        <section id="section-about" class="section-about pad-top-none pad-bottom-none pb-lg-0" style="margin: 30px 0;">
+            <div class="container">
+                <!-- Row -->
+                <div class="row d-flex align-items-center">
+        
+                    <!-- Col -->
+                    <div class="col-lg-6 ps-lg-0">
+                        <div class="title-wrap margin-bottom-30">
+                            <div class="section-title">
+                                <span class="sub-title theme-color text-uppercase">{{servicio.title}}</span>
+                                <h2 class="section-title margin-top-5 margin-bottom-35 pb-3">{{subservice.title}}
+                                </h2>
+                                <span class="border-bottom"></span>
+                            </div>
+                            <div class="pad-top-15">
+                                <div class="margin-bottom-20">
+                                    {{subservice.description|safe}}   
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <!-- Col -->
+        
+                    <!-- Col -->
+                    <div class="col-lg-6">
+                        <!-- about wrap -->
+                        <div class="about-wrap relative">
+                            <div class="about-wrap-inner">
+                                <!-- about details -->
+                                <div class="about-wrap-details">
+                                    <!-- about button -->
+                                    <div class="text-center">
+                                        <div class="about-img mb-4 mb-md-0">
+                                            <img src="{{subservice.image.url}}" width="430"
+                                                height="580" class="" alt="about-img">
+                                        </div>
+                                        <!-- .col -->
+                                    </div>
+                                </div>
+                                <!-- about details End-->
+                            </div>
+                        </div>
+                        <!-- about wrap end -->
+                    </div>
+                    <!-- .col -->
+        
+                </div>
+                <!-- Row -->
+            </div>
+            <!-- Container -->
+        </section>
+    {% endif %}
+{% endfor %}

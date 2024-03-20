@@ -1,0 +1,67 @@
+{% load static %}
+
+<div class="content-wrapper pad-none">
+    <div class="content-inner">
+        <!-- FAQ Section -->
+        <section id="faq-section" class="faq-section faq" style="padding-bottom: 0px;">
+            <div class="container">
+                <div class="row title-wrap text-center">
+                    <div class="section-title">
+                        <h2 class="section-title margin-top-5 mb-0">FAQ<span class="theme-color">'s</span>
+                        </h2>
+                        <span class="border-bottom center"></span>
+                    </div>
+                </div>
+                <!-- Row -->
+                <div class="row">
+                    <!-- Col -->
+                    <div class="col-md-12 mb-5 mb-md-0">
+                        <!-- Accordion Begins -->
+                        <div class="accordion model-2" id="accordion2">
+                            {% for faq in faqs %}
+                                {% if forloop.counter == 1 %}
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="heading{{forloop.counter}}">
+                                            <a class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapse{{forloop.counter}}" aria-expanded="true"
+                                                aria-controls="collapse{{forloop.counter}}">
+                                                {{faq.title}}
+                                            </a>
+                                        </h2>
+                                        <div id="collapse{{forloop.counter}}" class="accordion-collapse collapse show"
+                                            aria-labelledby="headingOne" data-bs-parent="#accordion2">
+                                            <div class="accordion-body">
+                                                {{faq.description|safe}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="heading{{forloop.counter}}">
+                                            <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapse{{forloop.counter}}" aria-expanded="false"
+                                                aria-controls="collapse{{forloop.counter}}">
+                                                {{faq.title}}
+                                            </a>
+                                        </h2>
+                                        <div id="collapse{{forloop.counter}}" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                            data-bs-parent="#accordion2">
+                                            <div class="accordion-body">
+                                                {{faq.description|safe}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <!-- Accordion Ends -->
+                    </div>
+                    <!-- Col -->
+                    
+                </div>
+            </div>
+            <!-- Container -->
+        </section>
+        <!-- FAQ Section End -->
+    </div>
+</div>

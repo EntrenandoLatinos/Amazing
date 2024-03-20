@@ -12,7 +12,7 @@ def index(request):
   servicios = Service.objects.all()
   works = WorkImage.objects.all().order_by('?')[:6]
   testimonials = Testimonial.objects.all()
-  partners = Partner.objects.all()
+  partners = Partner.objects.all().order_by('?')
   social_media = SocialMedia.objects.all()
   context = {
     'contact':contact,
@@ -103,13 +103,15 @@ def services_view(request, pk):
   subservicios = SubService.objects.filter(service=pk)
   works = WorkImage.objects.all().order_by('?')[:1]
   social_media = SocialMedia.objects.all()
+  indicators = Counter.objects.all().last()
   context = {
     'contact':contact, 
     'servicio':servicio, 
     'servicios':servicios, 
     'subservicios':subservicios, 
     'works':works,
-    'social_media':social_media
+    'social_media':social_media,
+    'indicators':indicators
     }
   if request.method == 'POST':
     if 'stay_connected' in request.POST:
@@ -130,12 +132,14 @@ def works(request):
   gallery = WorkImage.objects.all().order_by('?')
   social_media = SocialMedia.objects.all()
   works = WorkImage.objects.all().order_by('?')[:1]
+  indicators = Counter.objects.all().last()
   context = {
     'contact':contact,
     'servicios':servicios,
     'gallery':gallery,
     'works':works,
-    'social_media':social_media
+    'social_media':social_media,
+    'indicators':indicators
   }
   if request.method == 'POST':
     if 'stay_connected' in request.POST:
@@ -156,12 +160,14 @@ def faq(request):
   servicios = Service.objects.all()
   works = WorkImage.objects.all().order_by('?')[:1]
   social_media = SocialMedia.objects.all()
+  indicators = Counter.objects.all().last()
   context = {
     'contact':contact, 
     'servicios':servicios, 
     'faqs':faqs, 
     'social_media':social_media, 
-    'works':works
+    'works':works,
+    'indicators':indicators
   }
   if request.method == 'POST':
     if 'stay_connected' in request.POST:
@@ -182,12 +188,14 @@ def contact(request):
   testimonials = Testimonial.objects.all()
   social_media = SocialMedia.objects.all()
   works = WorkImage.objects.all().order_by('?')[:1]
+  indicators = Counter.objects.all().last()
   context = {
     'servicios':servicios, 
     'contact':contact, 
     'testimonials':testimonials, 
     'social_media':social_media,
-    'works':works
+    'works':works,
+    'indicators':indicators
   }
   if request.method == 'POST':
     print(f"Veamos si entra en el metyhod post")
@@ -219,12 +227,14 @@ def privacy(request):
   privacy = Privacy.objects.all().last()
   social_media = SocialMedia.objects.all()
   works = WorkImage.objects.all().order_by('?')[:1]
+  indicators = Counter.objects.all().last()
   context = {
     'contact':contact, 
     'servicios':servicios, 
     'privacy':privacy, 
     'social_media':social_media,
-    'works':works
+    'works':works,
+    'indicators':indicators
   }
   if request.method == 'POST':
     if 'stay_connected' in request.POST:

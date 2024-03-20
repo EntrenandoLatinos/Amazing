@@ -1,0 +1,106 @@
+{% load static %}
+
+<!-- Testimonial Section -->
+<!-- <section id="section-testimonial" class="section-testimonial bg-custom pad-top-90 o-visible"> -->
+<section id="section-testimonial" class="section-testimonial section-bg-img bg-fixed pad-bottom-90 o-visible" data-bg="{% static 'app_core/images/bg/bg-1.jpg' %}">
+    <div class="container">
+        <!-- Row -->
+        <div class="row">
+            <div class="offset-md-3 col-md-6">
+                <div class="title-wrap text-center">
+                    <div class="section-title">								            
+                        <h2 class="section-title margin-top-5 typo-white mb-0">What Our Clients <span class="theme-color">Say About Us</span></h2>
+                    </div>	
+                    <!-- <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit vestibulum nec.</p> -->
+                </div>
+            </div>
+            <div class="col-md-12">
+                <!--Team Main Slider-->
+                <div class="owl-carousel testimonial-main-wrapper" data-loop="1" data-nav="0" data-dots="1" data-autoplay="1" data-autoplaypause="0" data-autoplaytime="2500" data-smartspeed="1000" data-margin="30" data-items="3" data-items-tab="2" data-items-mob="1">
+                    
+                    <!--Item-->
+                    {% for testimonio in testimonials %}
+                        <div class="item">
+                            <div class="testimonial-style-2">
+                                <!--Team Inner-->										
+                                <div class="testimonial-inner">
+                                    <div class="testimonial-details text-left">															
+                                        <div class="star-rating">
+                                            <ul>
+                                                {% if testimonio.stars == '1' %}
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                {% elif testimonio.stars == '2' %}
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                {% elif testimonio.stars == '3' %}
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                {% elif testimonio.stars == '4' %}
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="far fa-star"></i></li>
+                                                {% elif testimonio.stars == '5' %}
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                    <li><i class="fa fa-star"></i></li>
+                                                {% endif %}
+                                            </ul>
+                                        </div>
+                                        <div class="testimonial-description margin-top-15">
+                                            <div class="mb-4 pb-1">{{testimonio.description}}</div>
+                                        </div>
+                                        <div class="client-details text-left left-align d-flex align-items-center">
+                                            <div class="client-image">
+                                                <!-- Image -->
+                                                {% if testimonio.image %}
+                                                    <img class="img-circle" src="{{testimonio.image.url}}" width="50" height="50" alt="">
+                                                {% else %}
+                                                    <img class="img-circle" src="{% static 'app_user/images/user.png' %}" width="50" height="50" alt="">
+                                                {% endif %}
+                                            </div>
+                                            <div class="client-info ms-3">
+                                                <!-- Name -->
+                                                <h4 class="mb-1">{{testimonio.name}}</h4> 
+                                                <!-- Company -->																 
+                                                <div class="client-designation theme-color">
+                                                    {% if testimonio.url %}
+                                                        <a href="{{testimonio.url}}" target="_blank">
+                                                            <img src="{% static 'app_core/images/google_business.webp' %}" alt="revie_google_business">
+                                                        </a>
+                                                    {% elif testimonio.location %}
+                                                        {{testimonio.location}}
+                                                    {% endif %}
+                                                </div>	
+                                            </div>
+                                        </div>																											
+                                    </div>													
+                                </div>
+                                <!--Team Inner Ends-->
+                            </div>
+                        </div>
+                    {% endfor %}
+                    <!--Item Ends-->
+
+                </div>
+                <!--Team Owl Slider-->
+            </div>	
+        </div>
+        <!-- Row -->							
+    </div>
+    <!-- Container -->
+</section>
+<!-- Testimonial Section End -->	

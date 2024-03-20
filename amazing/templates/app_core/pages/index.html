@@ -1,0 +1,93 @@
+{% extends "app_core/base.html" %}
+
+{% load static %}
+
+{% block head_title %}{{ block.super }} Home{% endblock head_title %}
+
+{% block extra_styles %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+/>
+<style>
+    .tp-leftarrow,
+    .tp-rightarrow {
+        display: none !important;
+    }
+    .hover_black:hover {
+        color: black;
+    }
+
+    /* Estilo para el div */
+    #imageContainer {
+        align-items: end;
+        width: 40%; /* Tamaño del div al 40% */
+    }
+    /* Estilo para la imagen dentro del div */
+    #imageContainer img {
+        width: 100%; /* Para asegurar que la imagen se ajuste al div */
+        height: auto; /* Para mantener la proporción de la imagen */
+    }
+</style>
+{% endblock extra_styles %}
+
+{% block content %}
+
+<!-- start Banner -->
+{% include 'app_core/snippets/banner.html' %}
+<!-- end Banner -->
+
+<!-- start Feature -->
+{% include 'app_core/snippets/feature.html' %}
+<!-- end Feature -->
+
+<!-- start About -->
+{% include 'app_core/snippets/about.html' %}
+<!-- end About -->
+
+<!-- start Insurance -->
+{% include 'app_core/snippets/insurance.html' %}
+<!-- end Insurance -->
+
+<!-- start Services -->
+{% include 'app_core/snippets/services2.html' %}
+<!-- end Services -->
+
+<!-- start Social Media -->
+{% include 'app_core/snippets/social_media.html' %}
+<!-- end Social Media -->
+
+<!-- start Gallery -->
+{% include 'app_core/snippets/gallery.html' %}
+<!-- end Gallery -->
+
+<!-- start Counters -->
+{% include 'app_core/snippets/counters.html' %}
+<!-- end Counters -->
+
+<!-- start Partners -->
+{% include 'app_core/snippets/partners.html' %}
+<!-- end Partners -->
+
+<!-- start Testimonials -->
+{% include 'app_core/snippets/testimonials.html' %}
+<!-- end Testimonials -->
+
+<!-- start Google Business -->
+    {% include 'app_core/snippets/google_business.html' %}
+<!-- end Google Business -->
+
+<!-- start Top Page -->
+{% include 'app_core/snippets/top_page.html' %}
+<!-- end Top Page -->
+
+{% endblock content %}
+
+{% block extra_javascript %}
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+    Fancybox.bind('[data-fancybox="gallery"]', {
+        // Your custom options for a specific gallery
+    });
+</script>
+{% endblock extra_javascript %}

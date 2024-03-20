@@ -1,0 +1,42 @@
+{% extends "app_core/base.html" %}
+
+{% load static %}
+
+{% block head_title %}{{ block.super }} About{% endblock head_title %}
+
+{% block extra_styles %}
+<style>
+    .col-lg-4:hover .feature-title h4 {
+        color: white;
+    }
+    .col-lg-4:hover .feature-content p {
+        color: rgb(228, 228, 228);
+    }
+</style>
+{% endblock extra_styles %}
+
+{% block content %}
+
+<!-- start Banner -->
+    {% include 'app_core/snippets/banner_about.html' %}
+<!-- end Banner -->
+
+<!-- start About Us -->
+    {% include 'app_core/snippets/about_section.html' %}
+<!-- end About Us -->
+
+<!-- start Mission Vision -->
+    {% include 'app_core/snippets/services_section.html' %}
+<!-- end Mission Vision -->
+
+<!-- start Counters -->
+    {% include 'app_core/snippets/counters.html' %}
+<!-- end Counters -->
+
+<!-- start Top Page -->
+    {% include 'app_core/snippets/top_page.html' %}
+<!-- end Top Page -->
+
+{% endblock content %}
+
+{% block extra_javascript %}{% endblock extra_javascript %}

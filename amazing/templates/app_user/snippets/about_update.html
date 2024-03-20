@@ -35,10 +35,18 @@
                         {% csrf_token %}
                         {{ about_form.media }}
                         <div class="item form-group">
-                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="title">Image <span class="required"></span>
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="title">Image index <span class="required"></span>
                             </label>
                             <div class="col-md-6 col-sm-6 ">
-                                {{about_form.image}}
+                                {{about_form.image1}}
+                            </div>
+                        </div>
+
+                        <div class="item form-group">
+                            <label class="col-form-label col-md-3 col-sm-3 label-align" for="title">Image section <span class="required"></span>
+                            </label>
+                            <div class="col-md-6 col-sm-6 ">
+                                {{about_form.image2}}
                             </div>
                         </div>
 
