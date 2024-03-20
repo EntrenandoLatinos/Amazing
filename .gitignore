@@ -6,10 +6,10 @@ __pycache__/
 .idea/
 
 # App migrations and media folders
-# amazing/app_core/migrations/
-# amazing/app_user/migrations/
-# amazing/media/
-# amazing/static/
+amazing/app_core/migrations/
+amazing/app_user/migrations/
+amazing/media/
+amazing/static/
 
 # Archivos de migraciones
 migrations/*
