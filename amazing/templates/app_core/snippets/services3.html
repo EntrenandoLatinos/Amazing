@@ -1,0 +1,55 @@
+<section class="blog-section full-dark">
+    <div class="container">
+        <!-- Blog Wrap -->
+        <div class="row">
+            <div class="offset-md-3 col-md-6">
+                <div class="title-wrap text-center">
+                    <div class="section-title">								            
+                        <h2 class="section-title margin-top-5 mb-0">Who<span class="theme-color"> We Are</span></h2>
+                    </div>
+                    <!-- <p>We ensure quality & support. People love us & we love them. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+                </div>
+            </div>
+            <div class="col-md-12">                                    
+                <div class="row">
+                    <!--Blog Main Slider-->
+                    <div class="owl-carousel blog-main-wrapper blog-style-2" data-loop="1" data-nav="0" data-dots="0" data-autoplay="1" data-autoplaypause="1" data-autoplaytime="5000" data-smartspeed="1000" data-margin="30" data-items="3" data-items-tab="2" data-items-mob="1">
+                        
+                        {% for servicio in servicios %}
+                            <!--Item-->
+                            <div class="item">
+                                <!--Blog Inner-->
+                                <div class="blog-inner mb-4">
+                                    <div class="blog-thumb relative">
+                                        <a href="{% url 'app_core:services_view' servicio.id %}">
+                                            <img src="{{servicio.image_large.url}}" class="img-fluid" width="768" height="600" alt="blog-img" />
+                                        </a>
+                                    </div>
+                                    <div class="blog-details">
+                                        <div class="top-meta">
+                                            <!-- <ul class="top-meta-list d-flex">
+                                            <li><div class="post-date"><a href="#"><i class="ti-calendar"></i> Oct 21, 2019</a></div></li>
+                                            </ul> -->
+                                        </div>
+                                        <div class="blog-title">
+                                            <h4 class="margin-bottom-10"><a href="{% url 'app_core:services_view' servicio.id %}" class="blog-name">{{servicio.title}}</a></h4>
+                                        </div>
+                                        <div class="post-desc mt-2">
+                                            <div class="blog-link">
+                                                <a href="{% url 'app_core:services_view' servicio.id %}" class="link font-w-500">Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Blog Inner Ends-->
+                            </div>
+                            <!--Item Ends-->
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog Wrap -->
+    </div>
+</section>
