@@ -190,6 +190,170 @@ def subservice_update(request, pk):
     context = {'service':service, 'subservice':subservice, 'subservice_form':subservice_form}
     return render(request, 'app_user/pages/subservice_update.html', context)
 
+################# REVIEWS ##################
+@login_required
+def reviews_index(request):
+    context = {}
+    return render(request, 'app_user/pages/reviews_index.html', context)
+
+############# GOOGLE BUSINESS ##############
+@login_required
+def google_business(request):
+    testimonials = Testimonial.objects.exclude(url__isnull=True)
+    if 'delete_testimonial' in request.POST:
+        testimonial_delete_form = TestimonialDeleteForm(request.POST)
+        if testimonial_delete_form.is_valid():
+            id_to_delete = testimonial_delete_form.cleaned_data['id_to_delete']
+            # Eliminar el registro con el id especificado
+            Testimonial.objects.filter(id=id_to_delete).delete()
+            return redirect('app_user:google_business')
+            
+    context = {'testimonials':testimonials}
+    return render(request, 'app_user/pages/google_business.html', context)
+
+@login_required
+def google_business_create(request):
+    if request.method == 'POST':
+        testimonial_form = TestimonialForm(request.POST, request.FILES)
+        if testimonial_form.is_valid():
+            url_google_business = testimonial_form.cleaned_data['url']
+            if url_google_business:
+
+                # Configura las opciones del navegador Chrome para ejecutar en modo headless
+                chrome_options = Options()
+                chrome_options.add_argument('--headless')
+                # Necesario para ejecutar en modo headless en Windows
+                # chrome_options.add_argument('--disable-gpu')  
+
+                # Obtiene la ruta al controlador del navegador Chrome
+                chrome_driver_path = "{% static 'chromedriver/chromedriver' %}"
+
+                # Configura el controlador del navegador
+                driver = webdriver.Chrome(options=chrome_options)
+
+                driver.get(url_google_business)
+
+                timeout = 10  # Ajusta este valor según sea necesario
+                espera = WebDriverWait(driver, timeout)
+
+                # Nombre del q hace el rivew
+                name = driver.find_element(By.CLASS_NAME, 'sZ0S5')
+                nombre = name.text
+
+                # Puntuacion - Estrellas
+                stars = driver.find_element(By.CLASS_NAME, 'kvMYJc')
+                aria_label = stars.get_attribute('aria-label')
+                # Extraer el número de estrellas del valor de aria-label
+                num_estrellas = int(aria_label.split()[0])
+
+                # Esperar hasta que el botón sea clickeable
+                try:
+                    button = WebDriverWait(driver, 10).until(
+                        EC.element_to_be_clickable((By.CLASS_NAME, "kyuRq"))
+                    )
+                    # Hacer clic en el botón
+                    button.click()
+                    print("Se hizo clic en el botón con éxito.")
+                except:
+                    print("No se pudo hacer clic en el botón.")
+
+                # Comentario
+                comment = driver.find_element(By.CLASS_NAME, 'wiI7pd')
+                comentario = comment.text
+                
+                # Cierra el navegador
+                driver.quit()
+
+                # Modificar los datos del formulario antes de guardar
+                testimonial_form.instance.name = nombre
+                testimonial_form.instance.stars = num_estrellas
+                testimonial_form.instance.description = comentario
+            # Guardar el testimonio
+            new_testimonial = testimonial_form.save()
+            return redirect('app_user:google_business')
+    else:
+        testimonial_form = TestimonialForm()
+
+    return render(request, 'app_user/pages/google_business_create.html', {'testimonial_form': testimonial_form})
+
+@login_required
+def google_business_update(request, pk):
+    testimonial = get_object_or_404(Testimonial, id=pk)
+
+    if request.method == 'POST':
+        if 'update_testimonial' in request.POST:
+            testimonial_form = TestimonialForm(request.POST, request.FILES, instance=testimonial, prefix='testimonial_update')
+            
+            if testimonial_form.is_valid():
+                url_google_business = testimonial_form.cleaned_data['url']
+                if url_google_business:
+
+                    # Configura las opciones del navegador Chrome para ejecutar en modo headless
+                    chrome_options = Options()
+                    chrome_options.add_argument('--headless')
+                    # Necesario para ejecutar en modo headless en Windows
+                    # chrome_options.add_argument('--disable-gpu')  
+
+                    # Obtiene la ruta al controlador del navegador Chrome
+                    chrome_driver_path = "{% static 'chromedriver/chromedriver' %}"
+
+                    # Configura el controlador del navegador
+                    driver = webdriver.Chrome(options=chrome_options)
+
+                    driver.get(url_google_business)
+
+                    timeout = 10  # Ajusta este valor según sea necesario
+                    espera = WebDriverWait(driver, timeout)
+
+                    # Nombre del q hace el rivew
+                    name = driver.find_element(By.CLASS_NAME, 'sZ0S5')
+                    nombre = name.text
+
+                    # Puntuacion - Estrellas
+                    stars = driver.find_element(By.CLASS_NAME, 'kvMYJc')
+                    aria_label = stars.get_attribute('aria-label')
+                    # Extraer el número de estrellas del valor de aria-label
+                    num_estrellas = int(aria_label.split()[0])
+
+                    # Esperar hasta que el botón sea clickeable
+                    try:
+                        button = WebDriverWait(driver, 10).until(
+                            EC.element_to_be_clickable((By.CLASS_NAME, "kyuRq"))
+                        )
+                        # Hacer clic en el botón
+                        button.click()
+                        print("Se hizo clic en el botón con éxito.")
+                    except:
+                        print("No se pudo hacer clic en el botón.")
+
+                    # Comentario
+                    comment = driver.find_element(By.CLASS_NAME, 'wiI7pd')
+                    comentario = comment.text
+                    
+                    # Cierra el navegador
+                    driver.quit()
+
+                    # Modificar los datos del formulario antes de guardar
+                    testimonial_form.instance.name = nombre
+                    testimonial_form.instance.stars = num_estrellas
+                    testimonial_form.instance.description = comentario
+                testimonial_form.save()
+                return redirect('app_user:google_business')
+        
+        elif 'delete_testimonial' in request.POST:
+            testimonial_delete_form = TestimonialDeleteForm(request.POST, prefix='testimonial_delete', initial={'id_to_delete': pk})
+            if testimonial_delete_form.is_valid():
+                id_to_delete = testimonial_delete_form.cleaned_data['id_to_delete']
+                # Eliminar el registro con el id especificado
+                Testimonial.objects.filter(id=id_to_delete).delete()
+                return redirect('app_user:google_business')
+    else:
+        testimonial_form = TestimonialForm(instance=testimonial, prefix='testimonial_update')
+        testimonial_delete_form = TestimonialDeleteForm(prefix='testimonial_delete', initial={'id_to_delete': pk})
+
+    context = {'testimonial':testimonial, 'testimonial_form':testimonial_form, 'testimonial_delete_form':testimonial_delete_form}
+    return render(request, 'app_user/pages/google_business_update.html', context)
+
 ############### TESTIMONIALS ###############
 @login_required
 def testimonials(request):
