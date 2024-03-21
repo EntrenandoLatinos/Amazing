@@ -48,7 +48,10 @@ class BannerForm(forms.ModelForm):
 class AboutForm(forms.ModelForm):
     class Meta:
         model = About
-        fields = ['image1', 'image2', 'about', 'mision', 'vision']
+        fields = ['image1', 'image2', 'about', 'mision', 'vision', 'image_google', 'url_google']
+        widgets = {
+            'url_google': forms.TextInput(attrs={'class': 'form-control', 'type': 'url'}),
+        }
 
 class SkillForm(forms.ModelForm):
     class Meta:
